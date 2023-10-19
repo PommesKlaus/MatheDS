@@ -1,0 +1,45 @@
+\subsection{Orthogonale Matrizen}
+
+Zwei Vektoren sind orthogonal, wenn ihr Skalarprodukt\\ 
+\begin{equation*}
+    \langle a, b \rangle = a_1 b_1 + \hdots + a_i b_i\ = 0
+\end{equation*}
+
+\underline{Äquivalente Aussagen:}
+\begin{itemize}
+    \item Matrix \(B\) ist orthogonal
+    \item \(B^T B = I\), d.h. \(B\) ist invertierbar mit \(B^{-1}=B^T\).
+    \item Die Spaltenvektoren von B definieren eine Orthonomalbasis von \(\mathbb{R}^n\)\\
+\end{itemize}
+
+\subsubsection{Orthogonalen Vektor mit dem Kreuzprodukt finden}
+Für \(\vec{a} \bot \vec{b}\) ergibt sich \(\vec{c}\) mit \(\vec{c} \bot \vec{a}, \vec{c} \bot \vec{b}\) aus:
+\begin{equation}
+    \vec{c} = 
+    \vec{a} \times \vec{b} = \begin{pmatrix}
+        a_1 \\
+        a_2 \\
+        a_3
+    \end{pmatrix} \times
+    \begin{pmatrix}
+        b_1 \\
+        b_2 \\
+        b_3
+    \end{pmatrix} =
+    \begin{pmatrix}
+        a_2 b_3 - a_3 b_2 \\
+        a_3 b_1 - a_1 b_3 \\
+        a_1 b_2 - a_2 b_1
+    \end{pmatrix}
+\end{equation}
+
+\subsubsection{Gram-Schmidt-Verfahren}
+\textit{Ziel:} Orthonormalbasis (ONB) zu einem Vektorraum \(B=\{b_1, b_2, \hdots b_n\}\) finden.\\
+
+\begin{enumerate}
+    \item Ersten Basisvektor normieren: \(\vec{q_1} = \frac{\vec{q_1}}{||\vec{q_1}||}\)
+    \item Fälle das Lot von \(b_2\) auf die von \(q_1\) erzeugte Gerade: \(l_2 = b_2 - \langle b_2, q_1 \rangle q_1\)
+    \item Normiere das Lot: \(\vec{q_2} = \frac{\vec{l_2}}{||\vec{l_2}||}\)
+    \item Wiederhole Schritte 2 und 3 für alle Basisvektoren:\\ 
+            \(l_i = b_i - \langle b_i, q_1 \rangle q_1 - \langle b_i, q_2 \rangle q_2 - \hdots - \langle b_i, q_{i-1} \rangle q_{i-1}\) und \(\vec{q_i} = \frac{\vec{l_i}}{||\vec{l_i}||}\)
+\end{enumerate}

@@ -1,0 +1,67 @@
+
+\subsection{Eigenwerte, Eigenvektoren und Eigenraum}
+
+Eine Zahl \(\lambda\) heißt Eigenwert der Matrix A, wenn es einen Vektor \(\vec{v}\) gibt, der nicht der Nullvektor ist, so dass gilt:
+
+\begin{equation}
+    \begin{split}
+        A v &= \lambda v \\
+        A v - \lambda v &= 0 \\
+        (A - \lambda I) v &= 0
+    \end{split}
+\end{equation}
+
+
+\subsubsection{Charakteristisches Polynom berechnen}
+Anstatt o.g. Gleichungzu lösen: Bestimmung der Nullstellen des charakteristischen Polynoms \(p_A(\lambda)\) der Matrix A.
+
+\begin{equation}
+    \begin{split}
+    p_A(\lambda) & = \det(A - \lambda E) \\
+    & = \begin{vmatrix}
+    a_{11} - \lambda & \cdots & a_{1n} \\
+    \vdots & \ddots & \vdots \\
+    a_{n1} & \cdots & a_{nn} - \lambda
+    \end{vmatrix} \overset{!}{=} 0
+    \end{split}
+\end{equation}
+
+Ergebnis: die Eigenwerte \(\lambda_1, \lambda_2, \dots, \lambda_n\) von A.
+
+\subsubsection{Eigenvektoren berechnen}
+Der zu einem Eigenwert \(\lambda_i\) gehörende Eigenvektor \(\vec{v_i}\) ist die Lösung der Gleichung:
+
+\begin{equation}
+    (A - \lambda_i I) \cdot \vec{x_i} = \vec{0}
+\end{equation}
+
+\textit{Rechenweg:}
+
+\begin{enumerate}
+    \item \(\lambda_i\) für \(\lambda\) in die Matrix \((A-\lambda E)\) einsetzen (siehe charakterisches Polynom)
+    \item Das folgende LGS durch elementare Zeilenoperationen lösen:\\
+        \begin{equation*}
+            \left( 
+            \begin{array}{ccc|c}
+                a_{11} - \lambda & \cdots & a_{1n} & 0\\
+                \vdots & \ddots & \vdots & 0\\
+                a_{n1} & \cdots & a_{nn} - \lambda & 0
+            \end{array}
+            \right)
+        \end{equation*}
+    \item Für Nullzeilen ergeben sich beliebige Lösungen, die gleich 1 gesetzt werden können.
+\end{enumerate}
+
+
+\subsubsection{Eigenraum berechnen}
+
+Der Eigenraum \(E_A(\lambda_i)\) einer Matrix A zu einem Eigenwert \(\lambda_i\) ist die Menge aller Eigenvektoren \(\vec{v_i}\) zu \(\lambda_i\).\\
+
+\textit{Lösung:}
+Vielfaches der Eigenvektoren in Mengenschreibweise festhalten:\\
+
+\begin{equation*}
+    E_A(\lambda_i) = \{ k \cdot \vec{v_i} | k \in \mathbb{R} \}   
+\end{equation*}
+
+\subsubsection{algebraische vs. geometrische Vielfachheit}
