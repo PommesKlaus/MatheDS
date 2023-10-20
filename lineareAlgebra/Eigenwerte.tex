@@ -3,19 +3,19 @@
 
 Eine Zahl \(\lambda\) heißt Eigenwert der Matrix A, wenn es einen Vektor \(\vec{v}\) gibt, der nicht der Nullvektor ist, so dass gilt:
 
-\begin{equation}
+\begin{equation*}
     \begin{split}
         A v &= \lambda v \\
         A v - \lambda v &= 0 \\
         (A - \lambda I) v &= 0
     \end{split}
-\end{equation}
+\end{equation*}
 
 
 \subsubsection{Charakteristisches Polynom berechnen}
 Anstatt o.g. Gleichungzu lösen: Bestimmung der Nullstellen des charakteristischen Polynoms \(p_A(\lambda)\) der Matrix A.
 
-\begin{equation}
+\begin{equation*}
     \begin{split}
     p_A(\lambda) & = \det(A - \lambda E) \\
     & = \begin{vmatrix}
@@ -24,14 +24,17 @@ Anstatt o.g. Gleichungzu lösen: Bestimmung der Nullstellen des charakteristisch
     a_{n1} & \cdots & a_{nn} - \lambda
     \end{vmatrix} \overset{!}{=} 0
     \end{split}
-\end{equation}
+\end{equation*}
 
 \subsubsection{Eigenvektoren berechnen}
 Der zu einem Eigenwert \(\lambda_i\) gehörende Eigenvektor \(\vec{v_i}\) ist die Lösung der Gleichung:
 
-\begin{equation}
-    (A - \lambda_i I) \cdot \vec{x_i} = \vec{0}
-\end{equation}
+\begin{equation*}
+    \begin{split}
+        A\vec{v_i} &= \lambda_i \vec{v_i} \\
+        (A - \lambda_i I) \cdot \vec{v_i} &= \vec{0}
+    \end{split}
+\end{equation*}
 
 \textit{Rechenweg:}
 

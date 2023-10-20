@@ -1,1 +1,18 @@
-\subsection{Pseudo-Inverse}
+\subsection{Pseudo-Inverse \(A^+\)}
+
+Approximation einer inversen Matrix Für nicht-quadratische Matrizen mit Hilfe der Singulärwertzerlegung (siehe \ref{SVD}).
+
+\begin{equation*}
+    A^+ = V \cdot \Sigma^{-1} \cdot U^T
+\end{equation*}
+wobei \(\Sigma^{-1}=diag(\sigma_1^{-1}, \hdots \sigma_r^{-1})\)\\
+
+\textit{Eigenschaften:}
+\begin{itemize}
+    \item \(A  A^+  A = A\)
+    \item \(A^+  A  A^+ = A^+\)
+    \item \((A  A^+)^T = A  A^+\) \(\rightarrow\) \(A  A^+\) ist symmetrisch
+    \item \((A^+  A)^T = A^+  A\) \(\rightarrow\) \(A^+  A\) ist symmetrisch
+    \item \(A^+ = A^{-1}\), wenn A invertierbar ist
+    \item \(A = U \Sigma V^T \Leftrightarrow A^T = V \Sigma U^T \)
+\end{itemize}
