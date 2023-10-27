@@ -1,8 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1697806968 "/home/c/Dokumente/MatheDS/main.tex" "main.pdf" "main" 1697806968
+["pdflatex"] 1698395783 "/home/c/Dokumente/MatheDS/main.tex" "main.pdf" "main" 1698395783
   "/etc/texmf/web2c/texmf.cnf" 1697701600 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/c/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk" 1697728581 11524 951c060c3319a53a3cedb50a84b4240a ""
-  "/home/c/Dokumente/MatheDS/main.tex" 1697800803 290 9375dba300d380e177e66e4b3c6cf54b ""
+  "/home/c/Dokumente/MatheDS/main.tex" 1698395014 326 3b64fb6078faeba822d9094cd6406fd9 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
@@ -84,10 +84,18 @@
   "lineareAlgebra/OrthogonaleMatrizen.tex" 1697806810 1701 bec5eedc3275c8282ae5a970fb79e67b ""
   "lineareAlgebra/PseudoInverse.tex" 1697806968 690 df3d1095a1b8710307916c49c4424d0d ""
   "lineareAlgebra/SVD.tex" 1697806944 4262 2b615710ace9f4b026cb91ad5b33250c ""
+  "lineareAlgebra/lineareAlgebra.aux" 1698395783 2670 1e54349efcae9dae6feb744d58f292d5 "pdflatex"
   "lineareAlgebra/lineareAlgebra.tex" 1697806838 287 8ba5fc84eb1ff1c662306da66dcee0ef ""
-  "main.aux" 1697806968 2114 9cc25f96afe18da0b22b2c3c8330a41c "pdflatex"
-  "main.tex" 1697800803 290 9375dba300d380e177e66e4b3c6cf54b ""
+  "main.aux" 1698395783 112 4cdda2ec4b3757b187d999f6a6918154 "pdflatex"
+  "main.tex" 1698395014 326 3b64fb6078faeba822d9094cd6406fd9 ""
+  "optimierung/gradientdescent.tex" 1698395694 100 bacefe996da37788cb3c3dd3fca29d73 ""
+  "optimierung/konvex.tex" 1698395453 39 c0cdce2ed8b95580d640fbf15e6a8bb8 ""
+  "optimierung/newton.tex" 1698395686 32 180e7babd120b7875481c80d6a678c5b ""
+  "optimierung/optimierung.aux" 1698395783 1291 a8c1682f5b4469f54ce18d87d75570c1 "pdflatex"
+  "optimierung/optimierung.tex" 1698395782 266 77d5b0e12c36fdd5105dcff86ee72734 ""
   (generated)
+  "lineareAlgebra/lineareAlgebra.aux"
   "main.aux"
   "main.log"
   "main.pdf"
+  "optimierung/optimierung.aux"

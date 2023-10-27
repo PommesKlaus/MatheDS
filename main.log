@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.19)  20 OCT 2023 15:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.19)  27 OCT 2023 10:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -145,7 +145,7 @@ Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count276
 \l__pdf_internal_box=\box56
-) (./main.aux)
+) (./main.aux (./lineareAlgebra/lineareAlgebra.aux) (./optimierung/optimierung.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
@@ -164,6 +164,8 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
+\openout2 = `lineareAlgebra/lineareAlgebra.aux'.
+
  (./lineareAlgebra/lineareAlgebra.tex (./lineareAlgebra/KernBild.tex
 LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -188,6 +190,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--5
  []
 
 (./lineareAlgebra/Determinante.tex) (./lineareAlgebra/Eigenwerte.tex [1
+
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 Underfull \hbox (badness 10000) in paragraph at lines 43--44
@@ -234,20 +237,27 @@ Overfull \hbox (4.75803pt too wide) in paragraph at lines 138--138
 |[][]
  []
 
-)) [4] [5] (./main.aux) ) 
+)) [4] [5]
+\openout2 = `optimierung/optimierung.aux'.
+
+ (./optimierung/optimierung.tex (./optimierung/konvex.tex) (./optimierung/gradientdescent.tex) (./optimierung/newton.tex)) [6
+
+
+
+] (./main.aux (./lineareAlgebra/lineareAlgebra.aux) (./optimierung/optimierung.aux)) ) 
 Here is how much of TeX's memory you used:
- 3598 strings out of 480194
- 58690 string characters out of 5893741
+ 3667 strings out of 480194
+ 61416 string characters out of 5893741
  364455 words of memory out of 5000000
- 21528 multiletter control sequences out of 15000+600000
+ 21576 multiletter control sequences out of 15000+600000
  479953 words of font info for 68 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 54i,23n,63p,416b,415s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 54i,23n,63p,418b,415s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/c/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (5 pages, 213615 bytes).
+Output written on main.pdf (6 pages, 215739 bytes).
 PDF statistics:
- 120 PDF objects out of 1000 (max. 8388607)
- 73 compressed objects within 1 object stream
+ 123 PDF objects out of 1000 (max. 8388607)
+ 75 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
