@@ -1,1 +1,51 @@
 \subsection{Konvexe Funktionen/Mengen}
+
+
+Eine \emph{Menge} $G \subseteq \mathbb{R}^n$ heißt \emph{konvex}, wenn für alle $x, y \in G$ und $t \in [0, 1]$ gilt:
+\begin{equation*}
+t x + (1 - t) y \in G
+\end{equation*}
+D.h. die Verbindungsstrecke zwischen zwei Punkten der Menge liegt komplett in der Menge.
+\\
+\\
+Eine \emph{Funktion} $f: \mathbb{R}^n \rightarrow \mathbb{R}$ heißt \emph{konvex} (\(\leq\)) bzw. \emph{strikt konvex} (\(<\)), wenn für alle $x, y \in \mathbb{R}^n$ und $t \in [0, 1]$ gilt:
+\begin{equation*}
+    f(t x + (1 - t) y) \leq t f(x) + (1 - t) f(y)
+\end{equation*}
+
+\underline{Vorgehensweise:}
+
+\begin{enumerate}
+    \item Hesse-Matrix (\(H_f(x)\), =symmetrisch) bestimmen:
+            \(H_f(x) =
+                \begin{pmatrix}
+                    f_{xx} & f_{xy} \\
+                    f_{yx} & f_{yy}
+                \end{pmatrix}
+            \)
+    \item Definitheit bestimmen:
+        \begin{enumerate}
+            \item über \emph{Eigenwerte}
+                \begin{itemize}
+                    \item Nullstellen charakteristisches Polynom bestimmen (\(\rightarrow \) \ref{sec:charPolynom})
+                    \item Interpretation:
+                    \begin{itemize}
+                        \item alle \(\lambda>0\rightarrow H_f(x)=\) pos. definit
+                        \item alle \(\lambda\geq 0\rightarrow H_f(x)=\) pos. semidefinit 
+                        \item alle \(\lambda<0\rightarrow H_f(x)=\) neg. definit 
+                        \item alle \(\lambda\leq 0\rightarrow H_f(x)=\) neg. semidefinit 
+                        \item \(\lambda\) positiv und negativ \(\rightarrow H_f(x)=\) indefinit
+                    \end{itemize}
+                \end{itemize}
+            \item über \emph{Diagonaldominanz}: Ist \(H_f(x)\) Diagonaldominant und alle Diagonalelemente \(>0\), so ist \(H_f(x)\) positiv definit.\\
+                \(\rightarrow \) für alle Zeilen: \(||\)Diagonalelement\(|| > \sum ||\)übrige Zeilenelemente\(||\) 
+            \item \emph{Choleskyzerlegung} ist möglich \(= H_f(x)\) ist positiv definit
+        \end{enumerate}
+    \item Konvexität bestimmen:
+        \begin{itemize}
+            \item \(H_f(x)\) positiv definit \(\Leftrightarrow\) \(f\) strikt konvex
+            \item \(H_f(x)\) positiv semidefinit \(\Leftrightarrow\) \(f\) konvex
+            \item \(H_f(x)\) negativ definit \(\Leftrightarrow\) \(f\) strikt konvex
+            \item \(H_f(x)\) negativ semidefinit \(\Leftrightarrow\) \(f\) konvex
+        \end{itemize}
+\end{enumerate}
