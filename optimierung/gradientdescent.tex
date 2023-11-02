@@ -1,2 +1,9 @@
 \subsection{Optimierung ohne NB - Gradientenverfahren}
-Inkl. stochastisches Gradientenabstiegsverfahren (3.3.4)
+Beginnend an einer Stelle \(x_0\): 
+\begin{enumerate}
+\item Berechne Gradienten \(\nabla f(x_n)\) (im ersten Schritt mit \(x_0\))
+\item Setze \(x_{n+1} = x_n - \alpha \nabla f(x_n), \;\;\;\; n \geq 0\) mit Schrittweite \(\alpha\)
+\item Wiederhole Schritt 1 und 2 bis Abbruchkriterium erfüllt; \(x^* = x_k\)
+\end{enumerate}
+
+Approximation von \(\nabla f(x_0)\) durch \(\frac{f(x_n) - f(x_{n-1})}{x_n - x_{n-1}}\) möglich.
