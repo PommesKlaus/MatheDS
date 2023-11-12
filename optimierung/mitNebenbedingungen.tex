@@ -3,13 +3,59 @@
 Dualität\\
 
 \subsubsection{KKT-Bedingungen}
-Erweiterung des Lagrange-Verfahrens um Nebenbedingungen.\\
-Es gelten folgende Aussagen (KKT-Bedingungen):
+Erweiterung des Lagrange-Verfahrens um Nebenbedingungen.
+Es gelten folgende KKT-Bedingungen:
 
-\begin{itemize}
-    \item \(g_i(x^*)\leq 0\)
-    \item \(h_j(x*)=0\)
+\begin{enumerate}[label=(\Roman*)]
+    \item \(g_i(x^*)\leq 0 \rightarrow \) \emph{Ungleichungs-NB nach \(0\) umformen}
+    \item \(h_j(x*)=0 \rightarrow\) \emph{Gleichungs-NB nach \(0\) umformen}
     \item \(\lambda_i^*\geq 0\)
     \item \(\lambda_i^*g_i(x^*)=0\)
-    \item $\nabla f(x^*) + \sum_{i=1}^m \lambda_i^* \nabla g_i(x^*) + \sum_{j=1}^p v_j^* \nabla h_j(x^*) = 0$
+    \item $\nabla f(x^*) + \sum_{i=1}^m \lambda_i^* \nabla g_i(x^*) + \sum_{j=1}^p v_j^* \nabla h_j(x^*) = 0$\\
+\end{enumerate}
+
+\underline{Vorgehensweise}:
+\begin{itemize}
+    \item Gleichungs-NB vorhanden \(\rightarrow\) (II) nach einer Variablen auflösen und in (I) und (V) einsetzen
+    \item 1. Ableitungen (Gradient \(\nabla\)) von (I), (II) und Zielfunktion \(f(x^*)\) bilden und (V) aufstellen
+    \item (IV) aufstellen und Fallgruppen bilden: Was muss für \(\lambda_i\) und \(g_i(x^*)\) gelten, damit Produkt \(=0\) wird?
+    \item Fallgruppen in (V) einsetzen und prüfen: Ist Lösung möglich? Sind alle Bedingungen erfüllt?
+    \begin{itemize}
+        \item Wenn ja: KKT-Punkt = Lösung gefunden
+        \item Wenn nein: Kombination nicht zulässig \(\rightarrow\) verwerfen!\\
+    \end{itemize}
 \end{itemize}
+
+\underline{Beispiel}:
+\begin{align*}
+    p^* &= \min 3x^2 + y^2\\
+    \text{unter } x - y &\leq -8\\
+    -y &\leq -0\\
+\end{align*}
+
+\begin{enumerate}
+    \item \(g_1(x^*)=x-y+8 \leq 0 \rightarrow \nabla g_1(x^*) = \begin{pmatrix}
+        1\\-1
+    \end{pmatrix}\)\\
+    \(g_2(x^*)=-y \leq 0 \rightarrow \nabla g_2(x^*) = \begin{pmatrix}
+        0\\-1
+    \end{pmatrix}\)\\
+    \(\nabla f(x^*) = \begin{pmatrix}
+        6x\\2y
+    \end{pmatrix}\)\\
+
+    \item (V): \(\begin{pmatrix}
+        6x\\2y
+    \end{pmatrix} + \lambda_1^* \begin{pmatrix}
+        1\\-1
+    \end{pmatrix} + \lambda_2^* \begin{pmatrix}
+        0\\-1
+    \end{pmatrix} = \begin{pmatrix}
+        0\\0
+    \end{pmatrix}\)\\
+
+    \item \(\lambda_1^* g_1(x^*) = \lambda_1^*(x-y+8)=0 \rightarrow\) \underline{\(\lambda_1^*=0\)} und \(x-y+8=0 \Leftrightarrow \)\underline{\(x = y-8\)}\\
+          \(\lambda_2^* g_2(x^*) = -\lambda_2^* y = 0 \rightarrow\) \underline{\(\lambda_2^*=0\)} und \underline{\(y=0\)}\\
+    
+    
+\end{enumerate}
