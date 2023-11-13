@@ -30,7 +30,7 @@ Es gelten folgende KKT-Bedingungen:
 \begin{align*}
     p^* &= \min 3x^2 + y^2\\
     \text{unter } x - y &\leq -8\\
-    -y &\leq -0\\
+    -y &\leq 0\\
 \end{align*}
 
 \begin{enumerate}
@@ -57,5 +57,50 @@ Es gelten folgende KKT-Bedingungen:
     \item \(\lambda_1^* g_1(x^*) = \lambda_1^*(x-y+8)=0 \rightarrow\) \underline{\(\lambda_1^*=0\)} und \(x-y+8=0 \Leftrightarrow \)\underline{\(x = y-8\)}\\
           \(\lambda_2^* g_2(x^*) = -\lambda_2^* y = 0 \rightarrow\) \underline{\(\lambda_2^*=0\)} und \underline{\(y=0\)}\\
     
+    \item Fallkombinationen prüfen:
+        \begin{itemize}
+            \item \underline{Fall 1}: \(\lambda_1^* = \lambda_2^* = 0 \rightarrow \begin{pmatrix}
+                6x\\2y
+                \end{pmatrix} = \begin{pmatrix}
+                    0\\0
+                \end{pmatrix}\Leftrightarrow x=y=0\) \Lightning \hspace{0.1em} wegen \(x-y\leq-8\)
+            \item \underline{Fall 2}: \(\lambda_1^* = y = 0 \rightarrow \begin{pmatrix}
+                6x\\0
+                \end{pmatrix} + \lambda_2^* \begin{pmatrix}
+                    0\\-1
+                \end{pmatrix}
+                 = \begin{pmatrix}
+                    0\\0
+                \end{pmatrix}\Leftrightarrow x=\lambda_2^*=0\) \Lightning \hspace{0.1em} wegen \(x-y\leq-8\)
+
+            \item \underline{Fall 3}: \(x=y-8; \lambda_2^*=0 \rightarrow
+                \begin{pmatrix}
+                    6(y-8)\\2y
+                \end{pmatrix} + \lambda_1^* \begin{pmatrix}
+                    1\\-1
+                \end{pmatrix} = \begin{pmatrix}
+                    0\\0
+                \end{pmatrix}\)\\
+                \begin{align*}
+                    6y-48+\lambda_1^* &= 0\\
+                    2y-\lambda_1^* &= 0\\
+                    \cline{1-2}
+                    8y = 48 \Leftrightarrow y &= 6 \checkmark\\
+                    x = y-8 \Leftrightarrow x &= -2 \checkmark\\
+                    \lambda_1^* = 2y &= 12 \checkmark\\
+                \end{align*} Es handelt sich um einen KKT-Punkt
+
+                \item \underline{Fall 4}: \(x=y-8; y=0 \rightarrow \begin{pmatrix}
+                    6(-8)\\0
+                    \end{pmatrix} + \lambda_1^* \begin{pmatrix}
+                        1\\-1
+                    \end{pmatrix} + \lambda_2^* \begin{pmatrix}
+                        0\\-1
+                    \end{pmatrix}
+                     = \begin{pmatrix}
+                        0\\0
+                    \end{pmatrix}\Leftrightarrow \lambda_1^*=48\) und \(-\lambda_1^* - \lambda_2^* = 0 \Leftrightarrow \lambda_2^*=-48\) \Lightning \hspace{0.1em} wegen (III)
     
+
+        \end{itemize} 
 \end{enumerate}
