@@ -1,1 +1,41 @@
 \section{Mehrdimensionale Wahrscheinlichkeitsrechnung}
+
+\subsection{Bedingte Wahrscheinlichkeit}
+
+\begin{equation*}
+    P(A|B)=\frac{P(A\cap B)}{P(B)}
+\end{equation*}
+
+\subsection{Bayes-Theorem}
+
+\begin{equation*}
+    P(A|B)=\frac{P(B|A)P(A)}{P(B)}
+\end{equation*}
+
+\subsection{Formeln}
+
+\subsubsection{Kovarianz, Korrelation}
+\begin{equation*}
+    Cov[X,Y]=E[(X-E[X])(Y-E[Y])]
+\end{equation*}
+
+\begin{equation*}
+    Cov[X,Y]=E[XY]-E[X]E[Y]
+\end{equation*}
+
+\begin{equation*}
+    Cov[X,Y]=Cov[Y,X] \text{ und } Cov[X,X]=Var[X]
+\end{equation*}
+
+\begin{equation*}
+    Cor[X,Y]=\frac{Cov[X,Y]}{\sqrt{Var(X)Var(Y)}}
+\end{equation*}
+
+\subsubsection{Linearkombinationen}
+\begin{equation*}
+    E[aX+bY]=aE[X]+bE[Y]
+\end{equation*}
+
+\begin{equation*}
+    Var[ax+bX]=a^2Var[X]+b^2Var[Y]+2abCov[X,Y]
+\end{equation*}
