@@ -2,7 +2,7 @@
 
 Schätzung eines Intervalls, in dem sich der wahre Wert (z.B. der Erwartungswert~\(\mu\)) mit einer gewissen Wahrscheinlichkeit befindet.
 \\\\
-\underline{Vorgehensweise}:
+\underline{Vorgehensweise bei \textbf{bekanntem} \boldmath{\(\sigma\)}}:
 \begin{enumerate}
     \item Punktschätzung des Erwartungswerts aus \(n\) Stichproben (\(x_i\))
             \[M(x)=\frac{1}{n}\sum_{i=1}^{n}x_i\]\\
@@ -20,7 +20,19 @@ Schätzung eines Intervalls, in dem sich der wahre Wert (z.B. der Erwartungswert
         \end{itemize}
     \item Berechnung des Konfidenzintervalls
     \begin{equation*}
-        \mathcal{I}(x) = \left[M(x) - z_{1-\frac{\alpha}{2}} \cdot s^*; M(x) + z_{1-\frac{\alpha}{2}} \cdot s^*\right]
+        \mathcal{I}(x) = \left[M(x) - z_{1-\frac{\alpha}{2}} \cdot s^*\hspace{0.5em}; \hspace{0.5em}M(x) + z_{1-\frac{\alpha}{2}} \cdot s^*\right]
     \end{equation*}
-    \emph{ist ein Konfidenzintervall zum Sicherheitsniveau \(1-\alpha\)}
+    \emph{ist ein Konfidenzintervall zum Sicherheitsniveau \(1-\alpha\)}\\
+\end{enumerate}
+
+\underline{Vorgehensweise bei \textbf{unbekanntem} \boldmath{\(\sigma\)} (grds. nur bei \(n\geq 30\))}:
+\begin{enumerate}
+    \item -- 3. analog zu oben, wobei Werte für \(t_{n-1,1-\frac{\alpha}{2}}\) aus der t-Verteilung verwendet werden 
+
+    \item Berechnung des Konfidenzintervalls
+    \begin{equation*}
+        \mathcal{I}(x) = \left[M(x) - t_{n-1;1-\frac{\alpha}{2}} \cdot s^*\hspace{0.5em}; \hspace{0.5em}M(x) + t_{n-1;1-\frac{\alpha}{2}} \cdot s
+        ^*\right]
+    \end{equation*}
+    \emph{ist ein Konfidenzintervall zum Sicherheitsniveau \(1-\alpha\)}\\
 \end{enumerate}
