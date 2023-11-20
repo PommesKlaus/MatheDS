@@ -1,0 +1,25 @@
+\subsection{Konfidenzintervalle}
+
+Schätzung eines Intervalls, in dem sich der wahre Wert (z.B. der Erwartungswert~\(\mu\)) mit einer gewissen Wahrscheinlichkeit befindet.
+\\\\
+\underline{Vorgehensweise}:
+\begin{enumerate}
+    \item Punktschätzung des Erwartungswerts aus \(n\) Stichproben (\(x_i\))
+            \[M(x)=\frac{1}{n}\sum_{i=1}^{n}x_i\]\\
+            \(\rightarrow\) dieser entspricht i.d.R. nicht dem wahren Wert \(\mu\) der Grundgesamtheit.
+    \item Berechnung des Standardfehlers der Stichprobenmittelwerte
+            \[\text{korrigierte Stichprobenvarianz: }V^*(x)=\frac{1}{n-1}\sum_{i=1}^{n}(x_i-M(x))^2\]
+            \[\text{Standardfehler: }s^*=\sqrt{\frac{V^*(x)}{n}}\]
+            \(\rightarrow\) dieser entspricht i.d.R. nicht dem wahren Wert \(\sigma\) der Grundgesamtheit.
+    \item Konfidenzniveau (\(1-\alpha\); \(\alpha=\) Irrtumsniveau) festlegen und \(z_{1-\frac{\alpha}{2}}\) aus Tabelle zur Normalverteilung ablesen
+        \begin{itemize}
+            \item \(90\% = 1-\alpha \rightarrow \alpha=0.1\rightarrow z_{0.95}=1.65\)
+            \item \(95\% \rightarrow \alpha=0.05\rightarrow z_{0.975}=1.96\)
+            \item \(98\% \rightarrow \alpha=0.02\rightarrow z_{0.99}=2.33\)
+            \item \(99\% \rightarrow \alpha=0.01\rightarrow z_{0.995}=2.58\)
+        \end{itemize}
+    \item Berechnung des Konfidenzintervalls
+    \begin{equation*}
+        \mathcal{I}(x) = \left[M(x) - z_{1-\frac{\alpha}{2}} \cdot s^*; M(x) + z_{1-\frac{\alpha}{2}} \cdot s^*\right]
+    \end{equation*}
+\end{enumerate}
