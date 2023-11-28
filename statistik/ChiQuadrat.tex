@@ -7,26 +7,27 @@ einer theoretischen (erwarteten) Verteilung. Es wird geprüft,
 ob die beobachtete Häufigkeitsverteilung von Kategorien mit der 
 erwarteten Häufigkeitsverteilung übereinstimmt.\\
 
-\textbf{1. Voraussetzung:} Zufallsvariable \(X\) (z.B. Anzahl der Morde) mit \(s\) Ausprägungen 
-(Kategorien; z.B. Wochentage) und \(N\) Beobachtungen (Stichprobenumfang).\\
+\textbf{1. Voraussetzung:} Zufallsvariable \(X\) (z.B. Ergebnis eines Würfelwurfs) mit \(s\) Ausprägungen 
+(Kategorien; z.B. 1-6 Würfelaugen) und \(N\) Beobachtungen (Stichprobenumfang).\\
 
-\textbf{2. Nullhypothese (\(H_0\)):} Die tatsächliche Verteilung entspricht der erwarteten Verteilung (\(P(X \in A_i)=\rho_i\))\\
+\textbf{2. Nullhypothese (\(H_0\)):} Die tatsächliche Verteilung entspricht der erwarteten Verteilung (\(P(X \in A_i)=\rho_i=\frac{1}{6}\))\\
 
 \textbf{3. Gegenhypothese (\(H_1\)):} Nicht \(H_0\)\\
 
 \textbf{4. \(\chi^2\)-Teststatistik:}
 
 \begin{equation*}
-    D_{\rho} = \sum_{i=1}^{s}\frac{(h(i)-N\rho(i))^2}{N\rho(i)}=N\sum_{i=1}^{s}\frac{L(i)^2}{\rho(i)} - N
+    D_{\rho} = \sum_{i=1}^{s}\frac{(h(i)-N\rho(i))^2}{N\rho(i)}=\left(\sum_{i=1}^{s}\frac{h(i)^2}{N\rho(i)}\right)-N=N\left(\sum_{i=1}^{s}\frac{L(i)^2}{\rho(i)}\right) - N
 \end{equation*}
-
-Summe über alle Kategorien \(A_i\) (\(i=1,2,...s\)): 
-Differenz aus der Anzahl beobachtete Werte \(h(i)\) und der 
-erwarteten Anzahl \(N\rho(i)\) (Multiplikation der 
-Wahrscheinlichkeit \(\rho(i)\) mit der Stichprobengröße 
-\(N\)). Diese Differenz wird quadriert und durch die erwartete 
-Anzahl \(N\rho(i)\) dividiert. Rechte Formelvariante berechnet
-die Teststatistik anhand der relativen beobachteten Häufigkeiten \(L(i)\).\\
+wobei
+\begin{itemize}
+    \item \(N\) = Stichprobengröße \emph{(z.B. 50 Würfe mit Würfel)}
+    \item \(s\) = Anzahl der Kategorien \emph{(z.B. 6 Würfelaugen)}
+    \item \(A_i\) = Kategorie \(i\) \emph{(z.B. Würfelaugen 1-6)}
+    \item \(h(i)\) = Anzahl der Beobacht. in Kategorie \(A_i\) \emph{(z.B. 8 Würfe 1er Würfe)}
+    \item \(L(i)\) = relative Häufigkeit der Beobachtungen in Kategorie \(A_i\) \emph{(z.B. 8/50 Würfe mit Würfelaugen 1 usw.)}
+    \item \(\rho(i)\) = Wahrscheinlichkeit der Kategorie \(A_i\) \emph{(z.B. \(\frac{1}{6}\) für Würfelauge 1 usw.)}
+\end{itemize}
 
 \textbf{5. Ablehnungsbereich:} \(H_0\) ablehnen, wenn:  \(D_{\rho} > \chi^2_{s-1;1-\alpha}\)\\
 
