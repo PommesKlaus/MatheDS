@@ -18,3 +18,56 @@
 	%\draw[red] ($(D)+(-1.5,0)$) ellipse (2cm and 3.5cm)node[yshift=3cm]{Patch H};
 	\end{tikzpicture}
 \end{center}
+
+\subsection{Übergangsmatrix}
+
+\subsection{Stationäre Verteilung}
+Ein Zustandsvektor \(\pi\) heißt \emph{stationäre Verteilung} einer Markov-Kette, wenn gilt:
+\begin{equation*}
+    \pi \cdot P = \pi
+\end{equation*}
+
+Gleichungen lösen, ggf. mit Hilfe von Parametern \(t\), wenn es keine eindeutige Lösung gibt. Wert für \(t\) bestimmen, indem die Summe der Komponenten des Vektors \(\pi\) gleich 1 gesetzt wird.\\
+
+\textbf{Beispiel:}
+\begin{equation*}
+    P = \begin{pmatrix}
+        0.5 & 0.5\\
+        0.3 & 0.7
+    \end{pmatrix}
+\end{equation*}
+\begin{equation*}
+    \begin{pmatrix}
+        \pi_1 & \pi_2
+    \end{pmatrix} \cdot \begin{pmatrix}
+        0.5 & 0.5\\
+        0.3 & 0.7
+    \end{pmatrix} = \begin{pmatrix}
+        \pi_1 & \pi_2
+    \end{pmatrix}
+\end{equation*}
+
+Da \(\sum \pi_i=1\) gilt
+
+\begin{equation*}
+    \pi_1 + \pi_2 = 1 \Leftrightarrow \underline{\pi_1 = 1 - \pi_2} \Leftrightarrow \underline{\pi_2 = 1 - \pi_1}
+\end{equation*}
+
+\(\pi_1\) und \(\pi_2\) in die folgenden Gleichungen einsetzen:
+
+\begin{equation*}
+    \pi_1 \cdot 0.5 + \pi_2 \cdot 0.3 = \pi_1 \Longrightarrow \pi_2 = \frac{5}{8}
+\end{equation*}
+\begin{equation*}
+    \pi_1 \cdot 0.5 + \pi_2 \cdot 0.7 = \pi_2 \Longrightarrow \pi_1 = \frac{3}{8}
+\end{equation*}
+
+Daraus folgt der stationäre Zustandsvektor: \(\pi = \begin{pmatrix}
+    \frac{3}{8} & \frac{5}{8}
+\end{pmatrix}\)
+
+
+
+\subsection{Irreduzibilität}
+
+\subsection{Aperiodizität}
