@@ -35,4 +35,26 @@ wobei
 
 \subsubsection{Unabhängigkeitstest}
 
-Prüft die Unabhängigkeit zweiter Merkmale, d.h. ob das Vorkommen einer Variable von der anderen ahängt oder nicht.
+Prüft die Unabhängigkeit zweiter Merkmale, d.h. ob das Vorkommen einer Variable von der anderen ahängt oder nicht.\\
+
+
+\textbf{1. Voraussetzung:} Zufallsvariable \(X\) und \(Y\) nehmen jeweils zwei Werte an (z.B. \(X\)=männlich/weiblich, \(Y\)=raucht/nicht raucht).\\
+
+\textbf{2. Nullhypothese (\(H_0\)):} \(X\) und \(Y\) sind stochastisch unabhängig\\
+
+\textbf{3. Gegenhypothese (\(H_1\)):} Nicht \(H_0\)\\
+
+\textbf{4. \(\chi^2\)-Teststatistik:}
+
+Aufstellen einer Vierfeldertafel:\\
+
+\begin{tabular}{c|c|c|c}
+               &$X$            &$\overline{X}$ &$\Sigma$\\ \hline
+$Y$            &   \(N_{11}\)  &  \(N_{12}\)   & \(N_{1 \cdot} \) \\\hline
+$\overline{Y}$ & \(N_{21}\)    &  \(N_{22}\) & \(N_{2\cdot} \) \\\hline
+$\Sigma$       & $N_{\cdot 1}$ & $N_{\cdot 2}$ & $n$\\
+\end{tabular}
+
+\textbf{Teststatisik, Freiheitsgrade und Irrtumswahrscheinlichkeit:}\\
+
+\textbf{5. Ablehnungsbereich:} \(H_0\) ablehnen, wenn:  \(T > \chi^2_{1;1-\alpha}\)\\
