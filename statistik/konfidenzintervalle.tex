@@ -1,18 +1,14 @@
 \subsection{Konfidenzintervalle}
 
 Schätzung eines Intervalls, in dem sich der wahre Wert (z.B. der Erwartungswert~\(\mu\)) mit einer gewissen Wahrscheinlichkeit befindet.
-\\\\
-\textcolor{red}{\textbf{FEHLER:}}
-\textcolor{red}{Hier dargestellte Vorgehensweise bei bekanntem \(\sigma\) ist falsch. Wenn \(\sigma\) vorhanden ist, wird auch damit gerechnet. Falls unbekannt, kommt Studentsche (t-) Verteilung zur Anwendung.}\\\\
-\underline{Vorgehensweise bei \textbf{bekanntem} \boldmath{\(\sigma\)}}:
+
+\subsubsection{Vorgehensweise bei Normalverteilung und \textbf{bekanntem} \boldmath{\(\sigma\)}}
+
 \begin{enumerate}
     \item Punktschätzung des Erwartungswerts aus \(n\) Stichproben (\(x_i\))
             \[M(x)=\frac{1}{n}\sum_{i=1}^{n}x_i\]\\
             \(\rightarrow\) dieser entspricht i.d.R. nicht dem wahren Wert \(\mu\) der Grundgesamtheit.
-    \item Berechnung des Standardfehlers der Stichprobenmittelwerte
-            \[\text{korrigierte Stichprobenvarianz: }V^*(x)=\frac{1}{n-1}\sum_{i=1}^{n}(x_i-M(x))^2\]
-            \[\text{Standardfehler: }s^*=\sqrt{\frac{V^*(x)}{n}}\]
-            \(\rightarrow\) dieser entspricht i.d.R. nicht dem wahren Wert \(\sigma\) der Grundgesamtheit.
+
     \item Konfidenzniveau (\(1-\alpha\); \(\alpha=\) Irrtumsniveau) festlegen und \(z_{1-\frac{\alpha}{2}}\) aus Tabelle zur Normalverteilung ablesen
         \begin{itemize}
             \item \(90\% = 1-\alpha \rightarrow \alpha=0.1\rightarrow z_{0.95}=1.65\)
@@ -23,20 +19,41 @@ Schätzung eines Intervalls, in dem sich der wahre Wert (z.B. der Erwartungswert
             \item \(99\% \rightarrow \alpha=0.01\rightarrow z_{0.995}=2.58\)
         \end{itemize}
     \item Berechnung des Konfidenzintervalls
-    \begin{equation*}
-        \mathcal{I}(x) = \left[M(x) - z_{1-\frac{\alpha}{2}} \cdot s^*\hspace{0.5em}; \hspace{0.5em}M(x) + z_{1-\frac{\alpha}{2}} \cdot s^*\right]
-    \end{equation*}
-    \emph{ist ein Konfidenzintervall zum Sicherheitsniveau \(1-\alpha\)}\\
+        \begin{equation*}
+            \mathcal{I}(x) = \left[M(x) - z_{1-\frac{\alpha}{2}} \cdot \frac{\sigma}{\sqrt{n}}\hspace{0.5em}; \hspace{0.5em}M(x) + z_{1-\frac{\alpha}{2}} \cdot \frac{\sigma}{\sqrt{n}}\right]
+        \end{equation*}
+        \emph{ist ein Konfidenzintervall zum Sicherheitsniveau \(1-\alpha\)}\\
 \end{enumerate}
 
-\underline{Vorgehensweise bei \textbf{unbekanntem} \boldmath{\(\sigma\)} (grds. nur bei \(n\geq 30\))}:
-\begin{enumerate}
-    \item -- 3. analog zu oben, wobei Werte für \(t_{n-1,1-\frac{\alpha}{2}}\) aus der t-Verteilung verwendet werden 
+\subsubsection{Vorgehensweise bei Normalverteilung und \textbf{unbekanntem} \boldmath{\(\sigma\)}}
 
+Grds. analog zu oben, wobei Werte für \(t_{n-1,1-\frac{\alpha}{2}}\) aus der t-Verteilung verwendet werden (Studentsche (\(t\)-) Verteilung mit \(n-1\) Freiheitsgraden).  Nur bei \(n\geq 30\).
+
+\begin{enumerate}
+    \item Punktschätzung des Erwartungswerts aus \(n\) Stichproben (\(x_i\))
+            \[M(x)=\frac{1}{n}\sum_{i=1}^{n}x_i\]\\
+            \(\rightarrow\) dieser entspricht i.d.R. nicht dem wahren Wert \(\mu\) der Grundgesamtheit.
+    \item Berechnung des Standardfehlers der Stichprobenmittelwerte
+        \[\text{korrigierte Stichprobenvarianz: }V^*(x)=\frac{1}{n-1}\sum_{i=1}^{n}(x_i-M(x))^2\]
+        \[\text{Standardfehler: }s^*=\sqrt{\frac{V^*(x)}{n}}\]
+        \(\rightarrow\) dieser entspricht i.d.R. nicht dem wahren Wert \(\sigma\) der Grundgesamtheit.
     \item Berechnung des Konfidenzintervalls
     \begin{equation*}
         \mathcal{I}(x) = \left[M(x) - t_{n-1;1-\frac{\alpha}{2}} \cdot s^*\hspace{0.5em}; \hspace{0.5em}M(x) + t_{n-1;1-\frac{\alpha}{2}} \cdot s
         ^*\right]
     \end{equation*}
-    \emph{ist ein Konfidenzintervall zum Sicherheitsniveau \(1-\alpha\)}\\
+    \emph{ist ein Konfidenzintervall zum Sicherheitsniveau \(1-\alpha\) mit \(n-1\) Freiheitsgraden}\\
 \end{enumerate}
+
+\subsubsection{Vorgehensweise im Binominalmodell}
+
+Wenn X binominalverteilt ist (\(X \sim  B(n, \pi)\), \(n\)=Anzahl gezogene Versuche, \(\pi\)=Erfolgswahrscheinlichkeit), \(n\) groß und die Varianz nicht zu klein ist (Faustregel: \(n\pi(1-\pi) > 9\)), gilt die Approximation durch die Normalverteilung mit:
+
+\begin{itemize}
+    \item Erwartungswert: \(\mu=n\pi\)
+    \item Standardabweichung: \(\sigma=\sqrt{n\pi(1-\pi)}\)
+    \item Standardfehler: \(s=\sqrt{\frac{\pi(1-\pi)}{n}}\)
+    \item Punktschätzung: \(\hat{\pi}=\frac{x}{n}\)
+    \item Konfidenzintervall für \(\pi\): \(\mathcal{I}(\pi)\approx \left[\hat{\pi}-z_{1-\frac{\alpha}{2}}\cdot s; \hat{\pi}+z_{1-\frac{\alpha}{2}}\cdot s\right]\)
+    \item Konfidenzintervall für \(\mu\): \(\mathcal{I}(\mu)\approx \left[\hat{\mu}-z_{1-\frac{\alpha}{2}}\cdot s; \hat{\mu}+z_{1-\frac{\alpha}{2}}\cdot s\right]\)
+\end{itemize}
