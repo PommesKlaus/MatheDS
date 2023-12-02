@@ -44,17 +44,40 @@ Prüft die Unabhängigkeit zweiter Merkmale, d.h. ob das Vorkommen einer Variabl
 
 \textbf{3. Gegenhypothese (\(H_1\)):} Nicht \(H_0\)\\
 
-\textbf{4. \(\chi^2\)-Teststatistik:}
+\textbf{4. \(\chi^2\)-Teststatistik:}\\
 
 Aufstellen einer Vierfeldertafel:\\
 
-\begin{tabular}{c|c|c|c}
-               &$X$            &$\overline{X}$ &$\Sigma$\\ \hline
-$Y$            &   \(N_{11}\)  &  \(N_{12}\)   & \(N_{1 \cdot} \) \\\hline
-$\overline{Y}$ & \(N_{21}\)    &  \(N_{22}\) & \(N_{2\cdot} \) \\\hline
-$\Sigma$       & $N_{\cdot 1}$ & $N_{\cdot 2}$ & $n$\\
-\end{tabular}
+\begin{minipage}[c]{.4\textwidth}
+    \centering
+    \begin{tabular}{c|c|c|c}
+                   & $Y$           & $\overline{Y}$ & $\Sigma$         \\ 
+                   \hline
+    $X$            & \(N_{11}\)    & \(N_{12}\)     & \(N_{1 \cdot} \) \\ 
+    \hline
+    $\overline{X}$ & \(N_{21}\)    & \(N_{22}\)     & \(N_{2\cdot} \)  \\ 
+    \hline
+    $\Sigma$       & $N_{\cdot 1}$ & $N_{\cdot 2}$  & $n$
+    \end{tabular}
+\end{minipage}
+\begin{minipage}[c]{.6\textwidth}
+    \centering
+    \begin{tabular}{c|c|c|c}
+             & Nichtraucher & Raucher & $\Sigma$ \\ 
+    \hline
+    männlich & 170          & 30      & 200 \\
+    \hline
+    weiblich & 250          & 150     & 400  \\
+    \hline
+    $\Sigma$ & 420          & 180     & 600
+    \end{tabular}
+\end{minipage}\\\\
 
-\textbf{Teststatisik, Freiheitsgrade und Irrtumswahrscheinlichkeit:}\\
+Daraus Berechnung der Teststatistik:
+\begin{equation*}
+    D_{\rho} = n \frac{(N_{11}N_{22}-N_{12}N_{21})^2}{N_{1\cdot}N_{2\cdot}N_{\cdot1}N_{\cdot2}}
+\end{equation*}
+
+\emph{Gedankenstütze: Determinante hoch 2 geteilt durch Produkt aus allen Spalten- und Zeilensummen}\\
 
 \textbf{5. Ablehnungsbereich:} \(H_0\) ablehnen, wenn:  \(T > \chi^2_{1;1-\alpha}\)\\
