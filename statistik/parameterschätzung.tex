@@ -1,3 +1,31 @@
 \subsection{Parameterschätzung}
 
-Maximum-Likelihood Schätzer (ML-Schätzer).
+Zentrale Größen:
+\begin{itemize}
+    \item Kovarianz: \(cov(X,Y)=E[(X-E[X])(Y-E[Y])]=E(XY)-E(X)E(Y)\)
+    \item Korrelation: \(corr(X,Y)=\frac{cov(X,Y)}{\sigma_X\sigma_Y}\) (liegt zwischen -1 und +1)
+\end{itemize}
+
+Kriterien für gute Schätzer:
+\begin{itemize}
+    \item \textbf{Konsistenz:} Schätzungen werden genauer, je größer die Stichprobe ist
+    \item \textbf{Erwartungstreue/Unverzerrtheit/unbiased:} Schätzer liegt im Mittel richtig.
+\end{itemize}
+
+\subsubsection{Maximum-Likelihood Schätzer (ML-Schätzer)}
+
+\begin{itemize}
+    \item \textbf{Binomialverteilung} (\(X\sim Bin(n, \pi)\), \(n\)=Länge der Versuchsreihe, \(\pi\)=Wahrscheinlichkeit für Erfolg):
+    \begin{itemize}
+        \item Erwartungswert \(\hat{\pi}=T(x)=\frac{x}{n} \rightarrow \) Anzahl Erfolge / Anzahl Versuche
+        \item Varianz \(\hat{\sigma}^2=\frac{\pi(1-\pi)}{n} \rightarrow \) ggf. mit \(\hat{\pi}\) rechnen
+    \end{itemize}
+    \item \textbf{Normalverteilung} (\(X\sim N(\mu, \sigma^2)\), \(\mu\)=Erwartungswert, \(\sigma^2\)=Varianz):
+    \begin{itemize}
+        \item Erwartungswert \(\hat{\mu}=T(x)=\frac{1}{n}\sum_{i=1}^{n}x_i \rightarrow \) arithmetisches Mittel
+        \item Varianz \(S^2=\frac{1}{n}\sum_{i=1}^{n}(x_i-\hat{\mu})^2 \rightarrow \) empirische Varianz
+        \item korrigierte Stichprobenvarianz \(S^{*2}=\frac{1}{n-1}\sum_{i=1}^{n}(x_i-\hat{\mu})^2 \)
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Bayes-Schätzer}
