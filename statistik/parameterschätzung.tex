@@ -28,4 +28,34 @@ Kriterien für gute Schätzer:
     \end{itemize}
 \end{itemize}
 
+\textbf{\emph{Beispiel für Herleitung (\(X\sim N(\mu, \sigma)\)):}}
+
+\begin{enumerate}
+    \item Aufstellen der ML-Funktion: \(L(\mu, \sigma^2)=\prod_{i=1}^{n}f(x_i)=\prod_{i=1}^{n}\frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x_i-\mu)^2}{2\sigma^2}}\)
+    \item Logarithmierung:\\
+        \begin{equation*}
+            \begin{split}
+            \ln(L(\mu, \sigma^2))&=\sum_{i=1}^{n}\ln(\frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x_i-\mu)^2}{2\sigma^2}})\\
+            &=\sum_{i=1}^{n}\left [ \ln(\frac{1}{\sqrt{2\pi\sigma^2}})-\frac{(x_i-\mu)^2}{2\sigma^2}\right ]\\
+            &=-\frac{n}{2}\ln(2\pi\sigma^2)-\frac{1}{2\sigma^2}\sum_{i=1}^{n}(x_i-\mu)^2\\
+            \end{split}
+        \end{equation*}
+    \item Ableiten nach \(\mu\) und \(\sigma^2\) und Nullsetzen:\\
+        \begin{equation*}
+            \begin{split}
+            \frac{\partial \ln(L(\mu, \sigma^2))}{\partial \mu}&=\frac{1}{\sigma^2}\sum_{i=1}^{n}(x_i-\mu)=0\\
+            &\Rightarrow \sum_{i=1}^{n}(x_i-\mu)=0\\
+            &\Rightarrow \sum_{i=1}^{n}x_i-\sum_{i=1}^{n}\mu=0\\
+            &\Rightarrow \sum_{i=1}^{n}x_i-n\mu=0\\
+            &\Rightarrow \sum_{i=1}^{n}x_i=n\mu\\
+            &\Rightarrow \mu=\frac{1}{n}\sum_{i=1}^{n}x_i\\
+            \frac{\partial \ln(L(\mu, \sigma^2))}{\partial \sigma^2}&=-\frac{n}{2\sigma^2}+\frac{1}{2(\sigma^2)^2}\sum_{i=1}^{n}(x_i-\mu)^2=0\\
+            &\Rightarrow \frac{n}{2\sigma^2}=\frac{1}{2(\sigma^2)^2}\sum_{i=1}^{n}(x_i-\mu)^2\\
+            &\Rightarrow \frac{n}{2}=\frac{1}{2\sigma^2}\sum_{i=1}^{n}(x_i-\mu)^2\\
+            &\Rightarrow \sigma^2=\frac{1}{n}\sum_{i=1}^{n}(x_i-\mu)^2\\
+            &\Rightarrow \sigma=\sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_i-\mu)^2}\\
+            \end{split}
+        \end{equation*}
+\end{enumerate}
+
 \subsubsection{Bayes-Schätzer}
