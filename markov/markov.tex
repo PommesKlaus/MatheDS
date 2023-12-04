@@ -19,6 +19,8 @@
 	\end{tikzpicture}
 \end{center}
 
+\emph{Eine homogene, \textbf{irreduzible}, \textbf{aperiodische} Markov-Kette mit endlichem Zustandsraum ist immer \textbf{stationär}, d.h. sie konvergiert gegen ihr statistisches Gleichgewicht.}
+
 \subsection{Übergangsmatrix}
 
 \subsection{Stationäre Verteilung}
@@ -70,4 +72,75 @@ Daraus folgt der stationäre Zustandsvektor: \(\pi = \begin{pmatrix}
 
 \subsection{Irreduzibilität}
 
+Es ist von jedem Zustand aus möglich, jeden anderen Zustand zu erreichen.
+Die Prüfung kann manuell erfolgen.\\
+
+\textbf{Beispiel:}
+\(
+    P = \begin{pmatrix}
+        1-p & p/2 & p/2\\
+        1 & 0 & 0\\
+        1 & 0 & 0
+    \end{pmatrix}
+\) ist irreduzibel für \(p\in (0,1]\), da für \(p=0\) Zustände 2 und 3 nicht mehr erreichbar sind.
+
 \subsection{Aperiodizität}
+
+Die Periode eines Zustands ist die größte gemeinsame Teiler aller Pfade, die zu diesem Zustand zurück führen.\\
+
+Starte in einem Zustand \(i\) und gehe in einen Zustand \(j\). Die Periode von \(i\) ist die größte gemeinsame Teiler aller Pfade, die von \(j\) nach \(i\) führen.
+Wenn die Periode von jedem Zustand \(i\) gleich 1 ist, ist die Markov-Kette aperiodisch. Das heißt:
+
+\begin{equation*}
+    d(z)=ggT\{n \in \mathbb{N} | P_{ii}^{(n)} > 0\} = 1
+\end{equation*}
+
+\textbf{Beispiel:}
+\(
+    P = \begin{pmatrix}
+        0 & 1\\
+        1 & 0
+    \end{pmatrix}
+\) ist \emph{nicht} aperiodisch, da \(d(z) = 2\); man springt immer zwischen den beiden Zuständen mit einer geraden Anzahl hin und her.\\
+
+\begin{center}
+	\begin{tikzpicture}[->, >=stealth', auto, semithick, node distance=3cm]
+	\tikzstyle{every state}=[fill=white,draw=black,thick,text=black,scale=1]
+	\node[state]    (A)               {$A$};
+	\node[state]    (B)[right of=A]   {$B$};
+	\path
+	(A) edge[bend left]			node{$1$}	(B)
+	(B) edge[bend left,below]	node{$1$}	(A);
+	%\node[above=0.5cm] (A){Patch G};
+	%\draw[red] ($(D)+(-1.5,0)$) ellipse (2cm and 3.5cm)node[yshift=3cm]{Patch H};
+	\end{tikzpicture}
+\end{center}
+
+\textbf{Beispiel:}
+\(
+    P = \begin{pmatrix}
+        1-p & p/2 & p/2\\
+        1 & 0 & 0\\
+        1 & 0 & 0
+    \end{pmatrix}
+\) ist aperiodisch für \(p\in [0,1)\), da bei \(p=1\) immer von Zustand 1 in 2 oder 3 gesprungen wird und wieder zurück.
+Für alle anderen Werte wird in zwei Fällen auch hin- und zurück. Allerdings gibt es auch die Möglichkeit, dass vom
+Zustand \(A\) nicht geswechelt wird und man dort bleibt.\\
+
+\begin{center}
+	\begin{tikzpicture}[->, >=stealth', auto, semithick, node distance=3cm]
+	\tikzstyle{every state}=[fill=white,draw=black,thick,text=black,scale=1]
+	\node[state]    (A)               {$A$};
+	\node[state]    (B)[right of=A]   {$B$};
+	\node[state]    (C)[left of=A]    {$C$};
+	% \node[state]    (D)[right of=C]   {$3$};
+	\path
+	(A) edge[loop left]			node{$1-p$}	(A)
+    (A) edge[bend left]			node{$p/2$}	(B)
+	(B) edge[bend left,below]	node{$1$}	(A)
+    (A) edge[bend left, below]			node{$p/2$}	(C)
+    (C) edge[bend left,below]	node{$1$}	(A);
+	%\node[above=0.5cm] (A){Patch G};
+	%\draw[red] ($(D)+(-1.5,0)$) ellipse (2cm and 3.5cm)node[yshift=3cm]{Patch H};
+	\end{tikzpicture}
+\end{center}
