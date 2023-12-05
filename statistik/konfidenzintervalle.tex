@@ -22,7 +22,8 @@ Schätzung eines Intervalls, in dem sich der wahre Wert (z.B. der Erwartungswert
         \begin{equation*}
             \mathcal{I}(x) = \left[M(x) - z_{1-\frac{\alpha}{2}} \cdot \frac{\sigma}{\sqrt{n}}\hspace{0.5em}; \hspace{0.5em}M(x) + z_{1-\frac{\alpha}{2}} \cdot \frac{\sigma}{\sqrt{n}}\right]
         \end{equation*}
-        \emph{ist ein Konfidenzintervall zum Sicherheitsniveau \(1-\alpha\)}\\
+        \emph{ist ein Konfidenzintervall zum Sicherheitsniveau \(1-\alpha\)}.\\\\
+        \underline{\emph{Vorgehensweise:}} \(1-\frac{\alpha}{2}\) berechnen und innerhalb der Tabelle zur Normalverteilung diesen Wert suchen. Der gesuchte \(z\)-Wert ergibt sich dann aus den Zeilen- und Spaltenberschriften.\\
 \end{enumerate}
 
 \subsubsection{Vorgehensweise bei Normalverteilung und \textbf{unbekanntem} \boldmath{\(\sigma\)}}
@@ -42,18 +43,21 @@ Grds. analog zu oben, wobei Werte für \(t_{n-1,1-\frac{\alpha}{2}}\) aus der t-
         \mathcal{I}(x) = \left[M(x) - t_{n-1;1-\frac{\alpha}{2}} \cdot s^*\hspace{0.5em}; \hspace{0.5em}M(x) + t_{n-1;1-\frac{\alpha}{2}} \cdot s
         ^*\right]
     \end{equation*}
-    \emph{ist ein Konfidenzintervall zum Sicherheitsniveau \(1-\alpha\) mit \(n-1\) Freiheitsgraden}\\
+    \emph{ist ein Konfidenzintervall zum Sicherheitsniveau \(1-\alpha\) mit \(n-1\) Freiheitsgraden}\\\\
+    \underline{\emph{Vorgehensweise:}} Richtige Zeile für Freiheitsgrade \(n-1\) suchen. In Spalte \(1-\frac{\alpha}{2}\) suchen. Der gewünschte \(t\)-Wert ergibt sich aus der Tabelle.\\
 \end{enumerate}
 
 \subsubsection{Vorgehensweise im Binominalmodell}
 
-Wenn X binominalverteilt ist (\(X \sim  B(n, \pi)\), \(n\)=Anzahl gezogene Versuche, \(\pi\)=Erfolgswahrscheinlichkeit), \(n\) groß und die Varianz nicht zu klein ist (Faustregel: \(n\pi(1-\pi) > 9\)), gilt die Approximation durch die Normalverteilung mit:
+Wenn X binominalverteilt ist (\(X \sim  B(n, p)\), \(n\)=Anzahl gezogene Versuche, \(p\)=Erfolgswahrscheinlichkeit), \(n\) groß und die Varianz nicht zu klein ist (Faustregel: \(np(1-p) > 9\)), gilt die Approximation durch die Normalverteilung mit:
 
 \begin{itemize}
-    \item Erwartungswert: \(\mu=n\pi\)
-    \item Standardabweichung: \(\sigma=\sqrt{n\pi(1-\pi)}\)
-    \item Standardfehler: \(s=\sqrt{\frac{\pi(1-\pi)}{n}}\)
-    \item Punktschätzung: \(\hat{\pi}=\frac{x}{n}\)
-    \item Konfidenzintervall für \(\pi\): \(\mathcal{I}(\pi)\approx \left[\hat{\pi}-z_{1-\frac{\alpha}{2}}\cdot s; \hat{\pi}+z_{1-\frac{\alpha}{2}}\cdot s\right]\)
+    \item Erwartungswert: \(\mu=np\)
+    \item Standardabweichung: \(\sigma=\sqrt{np(1-p)}\)
+    \item Standardfehler: \(s=\sqrt{\frac{p(1-p)}{n}}\)
+    \item Punktschätzung: \(\hat{p}=\frac{x}{n}\)
+    \item Konfidenzintervall für \(p\): \(\mathcal{I}(p)\approx \left[\hat{p}-z_{1-\frac{\alpha}{2}}\cdot s; \hat{p}+z_{1-\frac{\alpha}{2}}\cdot s\right]\)
     \item Konfidenzintervall für \(\mu\): \(\mathcal{I}(\mu)\approx \left[\hat{\mu}-z_{1-\frac{\alpha}{2}}\cdot s; \hat{\mu}+z_{1-\frac{\alpha}{2}}\cdot s\right]\)
 \end{itemize}
+
+\underline{\emph{Vorgehensweise:}} \(1-\frac{\alpha}{2}\) berechnen und innerhalb der Tabelle zur Normalverteilung diesen Wert suchen. Der gesuchte \(z\)-Wert ergibt sich dann aus den Zeilen- und Spaltenberschriften.\\
