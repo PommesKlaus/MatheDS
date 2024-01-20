@@ -1,17 +1,5 @@
 \section{Mehrdimensionale Wahrscheinlichkeitsrechnung}
 
-\subsection{Bedingte Wahrscheinlichkeit}
-
-\begin{equation*}
-    P(A|B)=\frac{P(A\cap B)}{P(B)}
-\end{equation*}
-
-\subsection{Bayes-Theorem}
-
-\begin{equation*}
-    P(A|B)=\frac{P(B|A)P(A)}{P(B)}
-\end{equation*}
-
 \subsection{Formeln}
 
 \subsubsection{Kovarianz, Korrelation}
@@ -28,7 +16,7 @@
 \end{equation*}
 
 \begin{equation*}
-    Cor[X,Y]=\frac{Cov[X,Y]}{\sqrt{Var(X)Var(Y)}}
+    Cor[X,Y]=\frac{Cov[X,Y]}{\sqrt{Var(X)Var(Y)}} \rightarrow [-1;+1]
 \end{equation*}
 
 \subsubsection{Linearkombinationen}
@@ -38,4 +26,39 @@
 
 \begin{equation*}
     Var[ax+bX]=a^2Var[X]+b^2Var[Y]+2abCov[X,Y]
+\end{equation*}
+
+\subsubsection{Mengen}
+
+\begin{figure}[ht]
+    \centering
+    \begin{minipage}{.5\textwidth}
+      \centering
+      \includegraphics[width=.4\linewidth]{mehrdimWktrechnung/Venn0001.svg.png}
+      \captionof*{figure}{Schnittmenge \(A\cap B\)}
+      \label{fig:schnittmenge}
+    \end{minipage}%
+    \begin{minipage}{.5\textwidth}
+      \centering
+      \includegraphics[width=.4\linewidth]{mehrdimWktrechnung/Venn0111.svg.png}
+      \captionof*{figure}{Vereinigung \(A\cup B\)}
+      \label{fig:vereinigungsmenge}
+    \end{minipage}
+\end{figure}
+
+\begin{equation*}
+    A\cup B = A+B-A\cap B
+\end{equation*}
+
+
+\subsection{Bedingte Wahrscheinlichkeit}
+
+\begin{equation*}
+    P(A|B)=\frac{P(A\cap B)}{P(B)}
+\end{equation*}
+
+\subsection{Bayes-Theorem}
+
+\begin{equation*}
+    P(A|B)=\frac{P(B|A)P(A)}{P(B)}
 \end{equation*}
