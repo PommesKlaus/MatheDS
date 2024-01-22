@@ -1,18 +1,17 @@
-\subsection{Optimierung unter Nebenbedingungen}
-\subsubsection{Lagrange-Verfahren}
-Dualität\\
+\subsection{Optimierung unter Nebenbedingungen (KKT)}
 
-\subsubsection{KKT-Bedingungen}
 Erweiterung des Lagrange-Verfahrens um Nebenbedingungen.
 Es gelten folgende KKT-Bedingungen:
 
 \begin{enumerate}[label=(\Roman*)]
     \item \(g_i(x^*)\leq 0 \rightarrow \) \emph{Ungleichungs-NB nach \(0\) umformen}
-    \item \(h_j(x*)=0 \rightarrow\) \emph{Gleichungs-NB nach \(0\) umformen}
+    \item \(h_j(x^*)=0 \rightarrow\) \emph{Gleichungs-NB nach \(0\) umformen}
     \item \(\lambda_i^*\geq 0\)
     \item \(\lambda_i^*g_i(x^*)=0\)
-    \item $\nabla f(x^*) + \sum_{i=1}^m \lambda_i^* \nabla g_i(x^*) + \sum_{j=1}^p v_j^* \nabla h_j(x^*) = 0$\\
+    \item $\mathcal{L}'(x,\lambda, v) = \nabla f(x^*) + \sum_{i=1}^m \lambda_i^* \nabla g_i(x^*) + \sum_{j=1}^p v_j^* \nabla h_j(x^*) = 0$\\
 \end{enumerate}
+
+mit den Lagrangemultiplikatoren ($\lambda, v$) als \emph{duale Variablen} und $x$ als \emph{primale Variable}.\\\newpage
 
 \underline{Vorgehensweise}:
 \begin{itemize}
