@@ -13,7 +13,9 @@ Eine \emph{Funktion} $f: \mathbb{R}^n \rightarrow \mathbb{R}$ heißt \emph{konve
     f(t x + (1 - t) y) \leq t f(x) + (1 - t) f(y)
 \end{equation*}
 
-\underline{Vorgehensweise:}
+Eine Funktion \(f(x)\) ist (strikt) konvex, wenn \(f''(x)\) überall \(\geq 0\) (bzw. \(> 0\)) ist.
+
+\subsubsection{Vorgehensweise bei mehrdimensionalen Funktionen:}
 
 \begin{enumerate}
     \item Hesse-Matrix (\(H_f(x)\), =symmetrisch) bestimmen:
@@ -49,3 +51,22 @@ Eine \emph{Funktion} $f: \mathbb{R}^n \rightarrow \mathbb{R}$ heißt \emph{konve
             \item \(H_f(x)\) negativ semidefinit \(\Leftrightarrow\) \(f\) konvex
         \end{itemize}
 \end{enumerate}
+
+
+\subsubsection{L-glatt und Lipschitz-stetig}
+
+Eine Funktion \(f(x)\) heißt \emph{Lipschitz-stetig}, wenn \(||f(x) - f(y)|| \leq L ||x - y||\) für alle \(x, y\) gilt.\\
+
+Eine Lipschitz-stetige Funktion ist eine stetige Funktion, deren Steigung beschränkt ist:
+
+\begin{equation*}
+    \left\Vert\frac{f(x)-f(y)}{x-y}\right\Vert \leq L \rightarrow \text{Jede Sekantensteigung} \leq L
+\end{equation*}
+
+\underline{Implikation:} Wenn zwei eingesetzte Punkte (\(x\), \(y\)) näher zusammenrücken, dann nähern sich auch die Funktionswerte \(f(x)\) und \(f(y)\) an.\\
+
+
+Eine Funktion \(f(x)\) heißt \emph{L-glatt}, wenn \(f\) differenzierbar ist und \(||\nabla f(x)|| \leq L\) für alle \(x\) gilt bzw. falls der Gradient L-Lipschitz-stetig ist, d.h. wenn
+\begin{equation*}
+    ||\nabla f(x) - \nabla f(y)|| \leq L||x-y||
+\end{equation*}
