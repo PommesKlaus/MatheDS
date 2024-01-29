@@ -1,0 +1,50 @@
+\subsection{Verteilungen}
+
+\subsubsection{Binomialverteilung (\(X\sim Bin(n,\pi)\))}
+Diskrete Wahrscheinlichkeitsverteilung; beschreibt die Anzahl an Erfolgen in einer Serie von unabhängigen Versuchen, die jeweils genau zwei Ergebnisse haben (Erfolg/Misserfolg); z.B. beim Münzwurf, Ziehen mit Zurücklegen.
+
+\begin{itemize}
+    \item \(n\)=Anzahl der Versuche/Ziehungen, \(\pi\)=Erfolgswahrscheinlichkeit (z.B. \(0.3\))
+    \item \textbf{Wahrscheinlichkeit:} \(P(X=k)=\binom{n}{k}\pi^k(1-\pi)^{n-k}\); \(k=\) Anzahl der gewünschten Erfolge
+    \item \textbf{Erwartungswert:} \(E(X)=n\pi\)
+    \item \textbf{Varianz:} \(Var(X)=n\pi(1-\pi)\)
+    \item \textbf{Normalapproximation:} \(X\sim N(n\pi, n\pi(1-\pi))\)
+    \item \textbf{Binomialkoeffizient:} \(\binom{n}{k}=\frac{n!}{k!(n-k)!}\)
+    \item \textbf{Bernoulli-Verteilung:} Spezialfall der Binomialverteilung mit \(n=1\)
+\end{itemize}
+
+
+\subsubsection{Poisson-Verteilung (\(X\sim Poi(\mu)\))}
+Diskrete Wahrscheinlichkeitsverteilung; beschreibt die Anzahl an Ereignissen in einem festgelegten Zeitintervall, wenn die Ereignisse mit einer konstanten Rate und unabhängig von der Zeit auftreten; z.B. Anzahl der Anrufe in einer Stunde, Anzahl der Kunden in einer Schlange, Anzahl der Fehler in einem Text. Für kleine \(\mu\) zeigt die Poisson-Verteilung eine starke Asysmmetrie (Rechtsschiefe).
+
+\begin{itemize}
+    \item \(\mu\)=Erwartungswert (z.B. \(0.3\))
+    \item \textbf{Wahrscheinlichkeit:} \(P(X=k)=\frac{\mu^k}{k!}e^{-\mu}\); \(k=\) Anzahl der gewünschten Ereignisse
+    \item \textbf{Erwartungswert:} \(E(X)=\mu\)
+    \item \textbf{Varianz:} \(Var(X)=\mu\)
+    \item \textbf{Normalapproximation:} \(X\sim N(\mu, \mu)\)
+    \item \textbf{Poisson-Verteilung als Grenzwert der Binomialverteilung:} \(Poi(\mu)=\lim_{n\rightarrow\infty}Bin(n,\frac{\mu}{n})\)
+\end{itemize}
+
+
+\subsubsection{Hypergeometrische Verteilung (\(X\sim H(n,N,m)\))}
+
+Ähnlich wie Binomialverteilung, aber ohne Zurücklegen; z.B. beim Ziehen ohne Zurücklegen aus einer Urne mit \(N\) Kugeln, davon \(m\) mit Erfolgsmarkierung.
+
+\begin{itemize}
+    \item \(n\)=Anzahl der Versuche/Ziehungen, \(N\)=Anzahl der Kugeln in der Urne, \(m\)=Anzahl der Kugeln mit Erfolgsmarkierung
+    \item \textbf{Wahrscheinlichkeit:} \(P(X=k)=\frac{\binom{m}{k}\binom{N-m}{n-k}}{\binom{N}{n}}\); \(k=\) Anzahl der gewünschten Erfolge
+    \item \textbf{Erwartungswert:} \(E(X)=n\frac{m}{N}\)
+    \item \textbf{Varianz:} \(Var(X)=n\frac{m}{N}\left(1-\frac{m}{N}\right)\left(\frac{N-n}{N-1}\right)\)
+    \item \textbf{Normalapproximation:} \(X\sim N\left(n\frac{m}{N}, n\frac{m}{N}\left(1-\frac{m}{N}\right)\left(\frac{N-n}{N-1}\right)\right)\)
+\end{itemize}
+
+
+\subsubsection{Normalverteilung (\(X\sim N(\mu, \sigma^2)\))}
+Stetige Wahrscheinlichkeitsverteilung; beschreibt viele natürliche Vorgänge (z.B. Körpergröße, IQ, Fehler in Messungen); zentrales Grenzwerttheorem: Summe von unabhängigen Zufallsvariablen strebt gegen Normalverteilung; symmetrisch um \(\mu\), \(\sigma^2\)-bestimmte Breite; \(\mu\)=Erwartungswert, \(\sigma^2\)=Varianz, \(\sigma\)=Standardabweichung.
+
+\begin{itemize}
+    \item \textbf{Erwartungswert:} \(E(X)=\mu\)
+    \item \textbf{Varianz:} \(Var(X)=\sigma^2\)
+    \item \textbf{Standardnormalverteilung:} \(Z\sim N(0,1)\)
+\end{itemize}

@@ -15,9 +15,18 @@
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.5\textwidth]{lineareAlgebra/1920px-Singular-Value-Decomposition.svg.png}
-    \caption{Singulärwertzerlegung }
+    \caption*{Singulärwertzerlegung }
     \label{fig:svd}
 \end{figure}
+
+\subsubsection{Einfaches Berechnungsverfahren (über Eigenvektoren)}
+\begin{enumerate}
+    \item \(AA^T\) und \(A^TA\) bestimmen
+    \item Für \glqq kleinere\dq Matrix aus 1) Eigenwerte \(\lambda_i\) bestimmen (char. Polynom)
+    \item \(\Sigma\) mit \(diag(\sigma_1 \geq \sigma_2 \geq \hdots \geq \sigma_n)\) aufstellen; Singulärwerte \(\sigma_i = \sqrt{\lambda_i}\) auf Hauptdiagonalen; Rest \(=0\)
+    \item \(U\) aufstellen: normierte Eigenvektoren für \(AA^T\) für alle \(\lambda_i\) bestimmen
+    \item \(V\) aufstellen: normierte Eigenvektoren für \(A^TA\) für alle \(\lambda_i\) bestimmen; \(V^T\) bilden
+\end{enumerate}
 
 
 
