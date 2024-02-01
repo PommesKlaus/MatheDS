@@ -16,8 +16,14 @@
 \end{equation*}
 
 \begin{equation*}
-    Cor[X,Y]=\frac{Cov[X,Y]}{\sqrt{Var(X)Var(Y)}} \rightarrow [-1;+1]
+    r_{XY} = Cor[X,Y]=\frac{Cov[X,Y]}{\sqrt{Var(X)Var(Y)}} \rightarrow [-1;+1]
 \end{equation*}
+
+Merke: 
+\begin{itemize}
+    \item statistische Unabhängigkeit \(\Rightarrow\) Unkorreliertheit
+    \item Unkorreliertheit \(\Rightarrow\) statistische Unabhängigkeit, \underline{nur} wenn \(X\) und \(Y\) normalverteilt sind
+\end{itemize}
 
 \subsubsection{Linearkombinationen}
 \begin{equation*}
@@ -25,7 +31,11 @@
 \end{equation*}
 
 \begin{equation*}
-    Var[ax+bX]=a^2Var[X]+b^2Var[Y]+2abCov[X,Y]
+    Var[aX+bY]=a^2Var[X]+b^2Var[Y]+2abCov[X,Y]
+\end{equation*}
+
+\begin{equation*}
+    Var[X_1 + \hdots + X_n]=\sum_{i=1}^{n}Var[X_i] + 2\sum_{1\leq i<j\leq n}Cov[X_i,X_j] \rightarrow\text{ \emph{Satz von Bienaymé}}
 \end{equation*}
 
 \subsubsection{Mengen}
@@ -49,6 +59,14 @@
 \begin{equation*}
     A\cup B = A+B-A\cap B
 \end{equation*}
+
+\subsubsection{Konvergenz}
+
+\begin{itemize}
+    \item \textbf{in Wahrscheinlichkeit}: \(X_n \xrightarrow{P} X\) wenn \(\forall \epsilon > 0: \lim_{n\rightarrow\infty}P(|X_n-X|>\epsilon)=0\)
+    \item \textbf{im p-ten Mittel/in \(\mathcal{L}^p\)}: \(X_n \xrightarrow{\mathcal{L}^p} X\) wenn \(\lim_{n\rightarrow\infty}E(|X_n-X|^p)\)
+    \item \textbf{fast sicher}: \(X_n \xrightarrow{fs} X\) wenn \(P(\lim_{n\rightarrow\infty}X_n=X)=1\)
+\end{itemize}
 
 
 \subsection{Bedingte Wahrscheinlichkeit}
