@@ -1,0 +1,25 @@
+\subsection{Polarkoordinaten}
+
+Umrechnung von Polarkoordinaten in kartesische Koordinaten:
+
+\begin{minipage}{0.3\textwidth}
+    \begin{tikzpicture}
+        \draw[->] (-0.2, 0) -- (3, 0) node[right] {\(x\)};
+        \draw[->] (0, -0.2) -- (0, 3) node[above] {\(y\)};
+        \draw[->] (0, 0) -- (2, 2) node[above] {\(r\)};
+        \draw[->] (0, 0) -- (2, 0) node[below] {\(x\)};
+        \draw[->] (0, 0) -- (0, 2) node[left] {\(y\)};
+        \draw (1, 0) arc (0:45:1) node[below] {\(\varphi\)};
+        \draw[dashed] (2, 0) -- (2, 2);
+    \end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{align*}
+        \cos(\varphi) = \frac{y}{r} \Leftrightarrow x &= r \cdot \cos(\varphi) \\
+        \sin(\varphi) = \frac{x}{r} \Leftrightarrow y &= r \cdot \sin(\varphi) \\
+        x^2 + y^2 = r^2 \Leftrightarrow r &= \sqrt{x^2 + y^2} \\
+        \varphi &= \arctan\left(\frac{y}{x}\right)
+    \end{align*}
+\end{minipage}
+
+
