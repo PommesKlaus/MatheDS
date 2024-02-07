@@ -63,11 +63,12 @@ Merke:
 \subsubsection{Konvergenz}
 
 \begin{itemize}
-    \item \textbf{in Wahrscheinlichkeit}: \(X_n \xrightarrow{P} X\) wenn \(\forall \epsilon > 0: \lim_{n\rightarrow\infty}P(|X_n-X|>\epsilon)=0\)
+    \item \textbf{in Wahrscheinlichkeit}: \(X_n \xrightarrow{P} X\) wenn \(\forall \epsilon > 0: \lim_{n\rightarrow\infty}P(|X_n-EW(X)| \geq\epsilon)=\\=P(X_n \geq\epsilon)=P(X_1\geq\epsilon)\times \hdots \times P(X_n\geq\epsilon)=(1-\epsilon)^n = 0\) für \(X_n\) unab. und gleichverteilt in [0,1]
     \item \textbf{im p-ten Mittel/in \(\mathcal{L}^p\)}: \(X_n \xrightarrow{\mathcal{L}^p} X\) wenn \(\lim_{n\rightarrow\infty}E(|X_n-X|^p)\)
     \item \textbf{fast sicher}: \(X_n \xrightarrow{fs} X\) wenn \(P(\lim_{n\rightarrow\infty}X_n=X)=1\)
 \end{itemize}
 
+Konvergenz bei einer Summe von Zufallsvariablen: \(X_n \rightarrow a\) und \(Y_n \rightarrow b \Longrightarrow X_n + Y_n \rightarrow a + b\)
 
 \subsection{Bedingte Wahrscheinlichkeit}
 
