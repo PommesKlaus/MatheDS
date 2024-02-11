@@ -1,10 +1,33 @@
 \subsection{Determinante}
 
-Spezielle Funktion, die einer quadratischen Matrix eine Zahl zuordnet. Diese gibt an, wie sich das Volumen bei der durch die Matrix beschriebenen linearen Abbildung ändert. \\
+Spezielle Funktion, die einer \underline{quadratischen} Matrix eine Zahl zuordnet. Diese gibt an, wie sich das Volumen bei der durch die Matrix beschriebenen linearen Abbildung ändert. \\
 
 \begin{itemize}
-    \item Determinante \(=\) Null \(\rightarrow\) Matrix ist nicht invertierbar
+    \item \(det(A)= 0\rightarrow\) Matrix \(A\) ist nicht invertierbar; ist z.B. der Fall, wenn
+    \begin{itemize}
+        \item eine Zeile oder Spalte nur aus Nullen besteht
+        \item 2 Zeilen/Spalten identisch sind
+        \item Zeilen/Spalten ein Vielfaches einer anderen Zeile/Spalte sind.
+    \end{itemize}
     \item \(det(I) = 1\)
+    \item \(det(A) = det(A^T)\)
+    \item \(det\begin{pmatrix}
+            \lambda \cdot a & \lambda \cdot b \\
+            c & d
+        \end{pmatrix} = \lambda \cdot det\begin{pmatrix}
+            a & b \\
+            c & d
+        \end{pmatrix} \rightarrow\) Eine Zeile mit \( \lambda \) multiplizieren
+    \item \(det(\lambda\cdot A) = \lambda^n \cdot det(A)\) \(\rightarrow\) Ganze Matrix (\(\mathbb{R}^{nxn}\)) mit \( \lambda \) multiplizieren
+    \item \(det(A^{-1}) = det(A)^{-1}=\frac{1}{det(A)}\)
+    \item \(det(A\cdot B) = det(A)\cdot det(B)\)
+    \item \(det\begin{pmatrix}
+            a & b \\
+            c & d
+        \end{pmatrix} = -det\begin{pmatrix}
+            c & d \\
+            a & b
+        \end{pmatrix}\rightarrow\) Zeilentausch: Vorzeichenwechsel
 \end{itemize}
 
 
