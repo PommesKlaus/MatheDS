@@ -14,13 +14,15 @@ Kriterien für gute Schätzer:
 
 \subsubsection{Maximum-Likelihood Schätzer (ML-Schätzer)}
 
+\textbf{Wichtige ML-Schätzer:}
+
 \begin{itemize}
-    \item \textbf{Binomialverteilung} (\(X\sim Bin(n, \pi)\), \(n\)=Länge der Versuchsreihe, \(\pi\)=Wahrscheinlichkeit für Erfolg):
+    \item \textbf{\emph{Binomialverteilung}} (\(X\sim Bin(n, \pi)\), \(n\)=Länge der Versuchsreihe, \(\pi\)=Wahrscheinlichkeit für Erfolg):
     \begin{itemize}
         \item Erwartungswert \(\hat{\pi}=T(x)=\frac{x}{n} \rightarrow \) Anzahl Erfolge / Anzahl Versuche
         \item Varianz \(\hat{\sigma}^2=\frac{\pi(1-\pi)}{n} \rightarrow \) ggf. mit \(\hat{\pi}\) rechnen
     \end{itemize}
-    \item \textbf{Normalverteilung} (\(X\sim N(\mu, \sigma^2)\), \(\mu\)=Erwartungswert, \(\sigma^2\)=Varianz):
+    \item \textbf{\emph{Normalverteilung}} (\(X\sim N(\mu, \sigma^2)\), \(\mu\)=Erwartungswert, \(\sigma^2\)=Varianz):
     \begin{itemize}
         \item Erwartungswert \(\hat{\mu}=T(x)=\frac{1}{n}\sum_{i=1}^{n}x_i \rightarrow \) arithmetisches Mittel
         \item Varianz \(S^2=\frac{1}{n}\sum_{i=1}^{n}(x_i-\hat{\mu})^2 \rightarrow \) empirische Varianz
@@ -28,7 +30,41 @@ Kriterien für gute Schätzer:
     \end{itemize}
 \end{itemize}
 
-\textbf{\emph{Beispiel für Herleitung (\(X\sim N(\mu, \sigma)\)):}}
+\textbf{Mathematische Bestimmung eines ML-Schätzers:}
+
+\begin{enumerate}
+    \item Aufstellen der ML-Funktion: \(L(\theta)=\prod_{i=1}^{n}f(x_i)\)
+    \item Logarithmierung: \(\ln(L(\theta))=\sum_{i=1}^{n}\ln(f(x_i))\); Umformen/Vereinfachen mit \textbf{\emph{Logarithmengesetzen}}:
+        \begin{itemize}
+            \item \(\ln(a\cdot b)=\ln(a)+\ln(b)\)
+            \item \(\ln(a^b)=b\cdot\ln(a)\)
+            \item \(\ln(e^a)=a\)
+            \item \(\ln(\frac{a}{b})=\ln(a)-\ln(b)\)
+            \item 1. Ableitung: \(\frac{\partial \ln(x)}{\partial x} = \frac{1}{x}\)
+        \end{itemize}
+    \item Ableiten nach \(\theta\) und Nullsetzen: \(\frac{\partial \ln(L(\theta))}{\partial \theta}=0\)
+    \item Lösen der Gleichung nach \(\theta\)
+    \item Überprüfen, ob es sich um ein Maximum handelt
+\end{enumerate}
+
+\textbf{Beispiel 1 für Herleitung einer Dichtefunktion:}
+
+Bestimme \(\theta\) mit der ML-Methode für die Dichtefunktion\\
+
+\(f(x) = \begin{cases}
+    4x^3\theta e^{-\theta x^4} & \text{für } x>0, \theta>0\\
+    0 & \text{sonst}
+\end{cases}\)\\
+
+\begin{enumerate}
+    \item Aufstellen der ML-Funktion: \(L(\theta)=\prod_{i=1}^{n}f(x_i)=\prod_{i=1}^{n}4x_i^3\theta e^{-\theta x_i^4}=\overbrace{4^n(x_1^3x_2^3\hdots x_n^3)\theta^n e^{-\theta(x_1^4+x_2^4+\hdots+x_n^4)}}^{\text{Sinnvoll zusammenfassen}}\)
+    \item Logarithmierung: \(\ln(L(\theta))=\ln(4^n(x_1^3x_2^3\hdots x_n^3))+n\ln(\theta)-\theta(x_1^4+x_2^4+\hdots+x_n^4)\underbrace{\ln(e)}_{=1}\)
+    \item Ableiten nach \(\theta\): \(\frac{\partial \ln(L(\theta))}{\partial \theta}=n\frac{1}{\theta}-\sum_{i=1}^{n}x_i^4\stackrel{!}{=}0\Leftrightarrow \theta=\frac{n}{\sum_{i=1}^{n}x_i^4}\)
+\end{enumerate}
+
+
+
+\textbf{Beispiel 2 für Herleitung (\(X\sim N(\mu, \sigma)\)):}
 
 \begin{enumerate}
     \item Aufstellen der ML-Funktion: \(L(\mu, \sigma^2)=\prod_{i=1}^{n}f(x_i)=\prod_{i=1}^{n}\frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x_i-\mu)^2}{2\sigma^2}}\)
@@ -44,9 +80,9 @@ Kriterien für gute Schätzer:
         \begin{equation*}
             \begin{split}
             \frac{\partial \ln(L(\mu, \sigma^2))}{\partial \mu}&=\frac{1}{\sigma^2}\sum_{i=1}^{n}(x_i-\mu)=0\\
-            &\Rightarrow \sum_{i=1}^{n}(x_i-\mu)=0\\
+            % &\Rightarrow \sum_{i=1}^{n}(x_i-\mu)=0\\
             &\Rightarrow \sum_{i=1}^{n}x_i-\sum_{i=1}^{n}\mu=0\\
-            &\Rightarrow \sum_{i=1}^{n}x_i-n\mu=0\\
+            % &\Rightarrow \sum_{i=1}^{n}x_i-n\mu=0\\
             &\Rightarrow \sum_{i=1}^{n}x_i=n\mu\\
             &\Rightarrow \mu=\frac{1}{n}\sum_{i=1}^{n}x_i\\
             \frac{\partial \ln(L(\mu, \sigma^2))}{\partial \sigma^2}&=-\frac{n}{2\sigma^2}+\frac{1}{2(\sigma^2)^2}\sum_{i=1}^{n}(x_i-\mu)^2=0\\
@@ -57,5 +93,3 @@ Kriterien für gute Schätzer:
             \end{split}
         \end{equation*}
 \end{enumerate}
-
-\subsubsection{Bayes-Schätzer}
