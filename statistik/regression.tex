@@ -1,0 +1,20 @@
+\subsection{Logistische Regression}
+
+Unterscheidung zwischen (einfacher/multipler) linearer und logistischer Regression:
+
+\begin{itemize}
+    \item \textbf{Lineare Regression:}
+    \begin{itemize}
+        \item Ziel: Schätzung des Erwartungswerts einer abhängigen Variable \(Y\) in Abhängigkeit von einer oder mehreren unabhängigen Variablen \(X\)
+        \item Modell: \(Y = \beta_0 + \beta_1 \cdot X_1 + \beta_2 \cdot X_2 + \ldots + \beta_n \cdot X_n + \varepsilon\)
+        \item \(\varepsilon\): Fehlerterm
+        \item \(\beta_0\): Achsenabschnitt
+        \item \(\beta_1, \beta_2, \ldots, \beta_n\): Regressionskoeffizienten
+    \end{itemize}
+    \item \textbf{Logistische Regression:}
+    \begin{itemize}
+        \item Ziel: Schätzung der Wahrscheinlichkeit, dass eine abhängige Variable \(Y\) den Wert 1 annimmt, in Abhängigkeit von einer oder mehreren unabhängigen Variablen \(X\)
+        \item Modell: \(P(Y=1) = \frac{1}{1+e^{-(\beta_0 + \beta_1 \cdot X_1 + \beta_2 \cdot X_2 + \ldots + \beta_n \cdot X_n)}}\)
+        \item \(\beta_0, \beta_1, \beta_2, \ldots, \beta_n\): Regressionskoeffizienten
+    \end{itemize}
+\end{itemize}
