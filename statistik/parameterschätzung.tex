@@ -3,12 +3,29 @@
 Kriterien für gute Schätzer:
 \begin{itemize}
     \item \textbf{Konsistenz:} Schätzungen werden genauer, je größer die Stichprobe ist
-    \item \textbf{Erwartungstreue/Unverzerrtheit/unbiased:} Schätzer liegt im Mittel richtig; z.B. \(\hat{\mu}=\frac{1}{n}\sum_{i=1}^{n}x_i\) liegt im Mittel bei \(\mu\). \underline{Achtung:} Stichprobenvarianz \(s^2=\frac{1}{n}\sum_{i=1}^{n}(x_i-\hat{\mu})^2\) ist \underline{nicht} erwartungstreu, da \(\hat{\mu}\) in \(\hat{\sigma}^2\) eingeht, Ausreißer landen systematisch seltener in der Stichprobe, so dass \(s^2\) zu klein ist. Lösung: Korrektur, so dass Schätzer der Stichprobenvarianz \(\hat{\sigma}^2=\bold{\frac{n}{n-1}}\cdot\frac{1}{n}\sum_{i=1}^{n}(x_i-\hat{\mu})^2\)\\
-        \underline{Beispiel}: Stichprobe mit \(N=5\text{, }s^2=2 \text{ und } \bar{x}=32\)\\
-        \(\rightarrow\) Schätzer Varianz \(\hat{\sigma}^2=\frac{5}{5-1}\cdot 2=2.5\) und Standardschätzfehler \(\hat{\sigma}_{\bar{x}}=\sqrt{\frac{\hat{\sigma}^2}{n}}=\sqrt{\frac{2.5}{5}}=0.707\)
+    \begin{itemize}
+        \item Ein Schätzer \(T\) ist konsistent für \(\theta\), wenn \(\lim_{n\rightarrow\infty}P(|T-\theta|>\varepsilon)\rightarrow 0\) bzw. \(\lim_{n\rightarrow\infty}Var(T)\rightarrow 0\)
+    \end{itemize}
+    \item \textbf{Erwartungstreue/Unverzerrtheit/unbiased:} Schätzer liegt im Mittel richtig
+    \begin{itemize}
+        \item Ein Schätzer \(T\) ist erwartungstreu für \(\theta\), wenn \(E(T)=\theta\)
+        \item z.B. \(\hat{\mu}=\frac{1}{n}\sum_{i=1}^{n}x_i\) liegt im Mittel bei \(\mu\). 
+        \item \underline{Achtung:} Stichprobenvarianz \(s^2=\frac{1}{n}\sum_{i=1}^{n}(x_i-\hat{\mu})^2\) ist \underline{nicht} erwartungstreu, da \(\hat{\mu}\) in \(s^2\) eingeht, Ausreißer landen systematisch seltener in der Stichprobe, so dass \(s^2\) zu klein ist. Lösung: Korrektur, so dass Schätzer der Stichprobenvarianz \(\hat{\sigma}^2=\bold{\frac{n}{n-1}}\cdot\frac{1}{n}\sum_{i=1}^{n}(x_i-\hat{\mu})^2\)
+        \item \underline{Beispiel}: Stichprobe mit \(N=5\text{, }s^2=2 \text{ und } \bar{x}=32\) \(\rightarrow\) Schätzer Varianz \(\hat{\sigma}^2=\frac{5}{5-1}\cdot 2=2.5\) und Standardschätzfehler \(\hat{\sigma}_{\bar{x}}=\sqrt{\frac{\hat{\sigma}^2}{n}}=\sqrt{\frac{2.5}{5}}=0.707\)
+    \end{itemize}
+    \item \emph{Beispiel 1:} \(T_1=\bar{X}\text{ mit }X_1, X_2, \cdots, X_n\sim N(\mu, \sigma)\)
+    \begin{itemize}
+        \item \(E(T_1)=E(\bar{X})=E(\frac{1}{n}\sum_{i=1}^{n}X_i)=\frac{1}{n}\sum_{i=1}^{n}E(X_i)=\frac{1}{n}\sum_{i=1}^{n}\mu=\frac{1}{n}n\mu=\mu \rightarrow\) erwartungstreu
+        \item \(Var(T_1)=Var(\bar{X})=Var(\frac{1}{n}\sum_{i=1}^{n}X_i)=\frac{1}{n^2}\sum_{i=1}^{n}Var(X_i)=\frac{1}{n^2}\sum_{i=1}^{n}\sigma^2=\frac{1}{n^2}n\sigma^2=\frac{\sigma^2}{n} \rightarrow 0\) für \(\lim_{n\rightarrow\infty}\rightarrow\) konsistent
+    \end{itemize} 
+    \item \emph{Beispiel 2:} \(T_2=\frac{1}{2}(X_1+X_n)\text{ mit }X_1, X_2, \cdots, X_n\sim N(\mu, \sigma)\)
+    \begin{itemize}
+        \item \(E(T_2)=E(\frac{1}{2}(X_1+X_n))=\frac{1}{2}(E(X_1)+E(X_n))=\frac{1}{2}(\mu+\mu)=\mu \rightarrow\) erwartungstreu
+        \item \(Var(T_2)=Var(\frac{1}{2}(X_1+X_n))=\left(\frac{1}{2}\right)^2(Var(X_1)+Var(X_n))=\frac{1}{4}(\sigma^2+\sigma^2)=\frac{\sigma^2}{2} \nrightarrow  0 \rightarrow\) nicht konsistent 
+    \end{itemize}
 \end{itemize}
 
-Zentrale Größen:
+\textbf{Zentrale Größen:}
 \begin{itemize}
     \item Kovarianz: \(cov(X,Y)=E[(X-E[X])(Y-E[Y])]=E(XY)-E(X)E(Y)\)
     \item Korrelation: \(corr(X,Y)=\frac{cov(X,Y)}{\sigma_X\sigma_Y}\) (liegt zwischen -1 und +1)
