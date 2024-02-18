@@ -102,15 +102,17 @@ Bestimme \(\theta\) mit der ML-Methode für die Dichtefunktion\\
             \begin{split}
             \frac{\partial \ln(L(\mu, \sigma^2))}{\partial \mu}&=\frac{1}{\sigma^2}\sum_{i=1}^{n}(x_i-\mu)=0\\
             % &\Rightarrow \sum_{i=1}^{n}(x_i-\mu)=0\\
-            &\Rightarrow \sum_{i=1}^{n}x_i-\sum_{i=1}^{n}\mu=0\\
+            &\Leftrightarrow \sum_{i=1}^{n}x_i-\sum_{i=1}^{n}\mu=0\\
             % &\Rightarrow \sum_{i=1}^{n}x_i-n\mu=0\\
-            &\Rightarrow \sum_{i=1}^{n}x_i=n\mu\\
-            &\Rightarrow \mu=\frac{1}{n}\sum_{i=1}^{n}x_i\\
+            &\Leftrightarrow \sum_{i=1}^{n}x_i=n\mu \Leftrightarrow \mu=\frac{1}{n}\sum_{i=1}^{n}x_i\\
+        %     \end{split}
+        % \end{equation*}
+        % \begin{equation*}
+        %     \begin{split}
             \frac{\partial \ln(L(\mu, \sigma^2))}{\partial \sigma^2}&=-\frac{n}{2\sigma^2}+\frac{1}{2(\sigma^2)^2}\sum_{i=1}^{n}(x_i-\mu)^2=0\\
-            &\Rightarrow \frac{n}{2\sigma^2}=\frac{1}{2(\sigma^2)^2}\sum_{i=1}^{n}(x_i-\mu)^2\\
-            &\Rightarrow \frac{n}{2}=\frac{1}{2\sigma^2}\sum_{i=1}^{n}(x_i-\mu)^2\\
-            &\Rightarrow \sigma^2=\frac{1}{n}\sum_{i=1}^{n}(x_i-\mu)^2\\
-            &\Rightarrow \sigma=\sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_i-\mu)^2}\\
+            &\Leftrightarrow \frac{n}{2\sigma^2}=\frac{1}{2(\sigma^2)^2}\sum_{i=1}^{n}(x_i-\mu)^2\\
+            &\Leftrightarrow \frac{n}{2}=\frac{1}{2\sigma^2}\sum_{i=1}^{n}(x_i-\mu)^2\\
+            &\Leftrightarrow \sigma^2=\frac{1}{n}\sum_{i=1}^{n}(x_i-\mu)^2 \Leftrightarrow \sigma=\sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_i-\mu)^2}\\
             \end{split}
         \end{equation*}
 \end{enumerate}
