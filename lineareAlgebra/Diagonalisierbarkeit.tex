@@ -7,10 +7,10 @@
     \item wenn alle Eigenwerte (\(\lambda_i\)) von \(A\) unterschiedlich sind.
 \end{itemize}
 
-Um die Diagonalmatrix \(D = S^{-1}AS\) bzw. \(A=SDS^{-1}\) zu bestimmen:
+Um die Diagonalmatrix \(D = M^{-1}AM\) bzw. \(A=MDM^{-1}\) zu bestimmen:
 \begin{enumerate}
     \item Eigenwerte \(\lambda_i\) von \(A\) bestimmen \(\rightarrow\) \textit{Nullstellen char. Polynom}
-    \item Eigenvektoren \(\vec{v_i}\) zu \(\lambda_i\) bestimmen \(\rightarrow\) \textit{Spalten der Matrix S}
+    \item Eigenvektoren \(\vec{v_i}\) zu \(\lambda_i\) bestimmen \(\rightarrow\) \textit{Spalten der Matrix M}
     \item Diagonalmatrix \(D = diag(\lambda_1, \lambda_2, \hdots \lambda_i)\) bestimmen
 \end{enumerate}
 
@@ -23,4 +23,4 @@ Dies ist genau dann der Fall, wenn \(A\) \underline{symmetrisch}  ist:
     \boldsymbol{A^T} = (S D S^T)^T = (S^T)^T D^T S^T = SDS^T = \boldsymbol{A}
 \end{equation*}
 
-Vorgehensweise analog zur Diagonalisierbarkeit; zusätzlich müssen die Eigenvektoren \(\vec{v_i}\) zu \(\lambda_i\) noch normiert werden (\(\tilde{v_i}=\frac{v_i}{||v_i||} \))
+Vorgehensweise analog zur Diagonalisierbarkeit, Spalten von \(M\) werden zu Zeilen von \(S\); zusätzlich müssen die Eigenvektoren \(\vec{v_i}\) zu \(\lambda_i\) noch normiert werden (\(\tilde{v_i}=\frac{v_i}{||v_i||} \))

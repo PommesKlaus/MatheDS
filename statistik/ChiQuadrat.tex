@@ -9,7 +9,7 @@
             \item Rechtsseitiger Test: Prüfe, ob anstatt \(H_0: p_0=0.3\) nicht \(H_1: p_1>0.3\) gilt
             \item Zweiseitiger Test: Prüfe, ob anstatt \(H_0: p_0=0.3\) nicht \(H_1: p_1\neq0.3\) gilt
         \end{itemize}
-    \item \textbf{Signifikanzniveau (\(\alpha\)):} (Irrtums-)Wahrscheinlichkeit, mit der die Nullhypothese fälschlicherweise abgelehnt wird
+    \item \textbf{Signifikanzniveau (\(\alpha\)):} Auch: Niveau des Testverfahrens. (Irrtums-)Wahrscheinlichkeit, mit der die Nullhypothese fälschlicherweise abgelehnt wird
     \item \textbf{Teststatistik:} Funktion der Stichprobenwerte, die zur Entscheidung über die Annahme oder Ablehnung der Nullhypothese herangezogen wird
     \item \textbf{Ablehnungsbereich:} Bereich der Teststatistik, in dem die Nullhypothese abgelehnt wird
     \item \textbf{p-Wert:} Wahrscheinlichkeit, mit der die Nullhypothese verworfen werden kann
@@ -23,10 +23,10 @@
 Vergleicht die beobachtete Verteilung einer Stichprobe mit 
 einer theoretischen (erwarteten) Verteilung. Es wird geprüft, 
 ob die beobachtete Häufigkeitsverteilung von Kategorien mit der 
-erwarteten Häufigkeitsverteilung übereinstimmt.\\
+erwarteten Häufigkeitsverteilung übereinstimmt (z.B. ob beobachtete erste Ziffern der \emph{Benford-Verteilung} (\(\mathbb{P}(X\in E_i) = \log_{10}(1+1/i)\)) entsprechen).\\
 
 \textbf{1. Voraussetzung:} Zufallsvariable \(X\) (z.B. Ergebnis eines Würfelwurfs) mit \(s\) Ausprägungen 
-(Kategorien; z.B. 1-6 Würfelaugen) und \(N\) Beobachtungen (Stichprobenumfang).\\
+(Kategorien; z.B. 1-6 Würfelaugen) und \(N\) Beobachtungen (Stichprobenumfang); Mindestens: \(N\geq 5 / \min(\rho_i)\)\\
 
 \textbf{2. Nullhypothese (\(H_0\)):} Die tatsächliche Verteilung entspr. der erwarteten Verteilung (\(P(X \in A_i)=\rho_i=\frac{1}{6}\))\\
 
@@ -50,6 +50,8 @@ wobei
 
 \textbf{5. Ablehnungsbereich:} \(H_0\) ablehnen, wenn:  \(D_{\rho} > \chi^2_{s-1;1-\alpha}\)\\
 
+
+Wenn nach einem \textbf{\(p\)-Wert} gefragt wird: Hierbei sucht man rückwärts in der Tabelle den Eintrag, der gerade so noch kleiner ist als der in der Aufgabe genannte Wert. Der Wert in der Spalte \(\alpha\) ist dann der gesuchte \(p\)-Wert. Dieser gibt das größte Signifikanzniveau an, bei dem die Nullhypothese verworfen wird. Je kleiner der \(p\)-Wert, desto unwahrscheinlicher ist es, dass die beobachteten Daten unter der Nullhypothese vorkommen könnten.\\
 
 \subsubsection{\(\chi^2\)-Unabhängigkeitstest}
 

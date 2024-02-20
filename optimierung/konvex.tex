@@ -65,7 +65,7 @@ Eine Lipschitz-stetige Funktion ist eine stetige Funktion, deren Steigung beschr
 \underline{Implikation:} Wenn zwei eingesetzte Punkte (\(x\), \(y\)) näher zusammenrücken, dann nähern sich auch die Funktionswerte \(f(x)\) und \(f(y)\) an.\\
 
 
-Eine Funktion \(f(x)\) heißt \emph{L-glatt}, wenn \(f\) differenzierbar ist und \(||\nabla f(x)|| \leq L\) für alle \(x\) gilt bzw. falls der Gradient L-Lipschitz-stetig ist, d.h. wenn
+Eine Funktion \(f(x)\) heißt \textbf{L-glatt}, wenn \(f\) \(L\)-mal differenzierbar ist und ihre \(L\)-te Ableitung (\(f^{(L)}(x)\)) Lipschitz-stetig ist, d.h. es gibt eine Konstante \(K\) , so dass für alle \(x, y\) in ihrem Definitionsbereich gilt:
 \begin{equation*}
-    ||\nabla f(x) - \nabla f(y)|| \leq L||x-y||
+    ||f^{(L)}(x) - f^{(L)}(y)|| \leq K||x-y||
 \end{equation*}

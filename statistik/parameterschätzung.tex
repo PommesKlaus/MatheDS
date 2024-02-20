@@ -7,8 +7,11 @@ Kriterien für gute Schätzer:
         \item Ein Schätzer \(T\) ist konsistent für \(\theta\), wenn \(\lim_{n\rightarrow\infty}P(|T-\theta|>\varepsilon)\rightarrow 0\) bzw. \(\lim_{n\rightarrow\infty}Var(T)\rightarrow 0\)
     \end{itemize}
     \item \textbf{Erwartungstreue/Unverzerrtheit/unbiased:} Schätzer liegt im Mittel richtig
+    \begin{textblock*}{5cm}(11.5cm,6.2cm) % {block width} (coords) 
+        \footnotesize{Bei gegebenem Schätzer \(T(x)=x^2-x\) und Verteilung \(\mathbb{P}_\Theta(\{n\})=\frac{\Theta^n}{n!e^\Theta}\)}
+     \end{textblock*}
     \begin{itemize}
-        \item Ein Schätzer \(T\) ist erwartungstreu für \(\theta\), wenn \(E(T)=\theta\)
+        \item Ein Schätzer \(T\) ist erwartungstreu für \(\theta\), wenn \(E(T)=\theta\); z.B. \(E(T)=E(T(X))=\sum_{k=0}^{\infty}\underbrace{T(k)\cdot\text{Wkt.fn}}_{(k^2-k)\frac{\Theta^k}{k!e^\Theta}}\)
         \item z.B. \(\hat{\mu}=\frac{1}{n}\sum_{i=1}^{n}x_i\) liegt im Mittel bei \(\mu\). 
         \item \underline{Achtung:} Stichprobenvarianz \(s^2=\frac{1}{n}\sum_{i=1}^{n}(x_i-\hat{\mu})^2\) ist \underline{nicht} erwartungstreu, da \(\hat{\mu}\) in \(s^2\) eingeht, Ausreißer landen systematisch seltener in der Stichprobe, so dass \(s^2\) zu klein ist. Lösung: Korrektur, so dass Schätzer der Stichprobenvarianz \(\hat{\sigma}^2=\bold{\frac{n}{n-1}}\cdot\frac{1}{n}\sum_{i=1}^{n}(x_i-\hat{\mu})^2\)
         \item \underline{Beispiel}: Stichprobe mit \(N=5\text{, }s^2=2 \text{ und } \bar{x}=32\) \(\rightarrow\) Schätzer Varianz \(\hat{\sigma}^2=\frac{5}{5-1}\cdot 2=2.5\) und Standardschätzfehler \(\hat{\sigma}_{\bar{x}}=\sqrt{\frac{\hat{\sigma}^2}{n}}=\sqrt{\frac{2.5}{5}}=0.707\)
@@ -54,7 +57,7 @@ Kriterien für gute Schätzer:
 \textbf{Mathematische Bestimmung eines ML-Schätzers:}
 
 \begin{enumerate}
-    \item Aufstellen der ML-Funktion: \(L(\theta)=\prod_{i=1}^{n}f(x_i)\)
+    \item Aufstellen der ML-Funktion: \(L(\theta)=\prod_{i=1}^{n}f(x_i)\); mit Dichtefunktion \(f(x_i)\) (vgl. S.~\pageref{verteilungen})
     \item Logarithmierung: \(\ln(L(\theta))=\sum_{i=1}^{n}\ln(f(x_i))\); Umformen/Vereinfachen mit \textbf{\emph{Logarithmengesetzen}}:
         \begin{itemize}
             \item \(\ln(a\cdot b)=\ln(a)+\ln(b)\)
