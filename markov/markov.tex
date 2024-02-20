@@ -23,11 +23,23 @@
 
 \subsection{Übergangsmatrix}
 
+\begin{itemize}
+	\item Zeilen: Quelle, von diesem Knoten startet man
+	\item Spalten: Zielknoten
+	\item \(p_{ij}\) gibt dann die Übergangswahrscheinlichkeiten an
+	\begin{itemize}
+		\item \(p_{ij} \in [0;1] \rightarrow\) Es sind nur Werte zwischen 0 und 1 erlaubt
+		\item \(\sum_{j=1}^{n} p_{ij} = 1 \rightarrow\) Die Summe der Zeilenwahrscheinlichkeiten \(=1\)
+	\end{itemize}
+\end{itemize}
+
 \subsection{Stationäre Verteilung}
 Ein Zustandsvektor \(\pi\) heißt \emph{stationäre Verteilung} einer Markov-Kette, wenn gilt:
 \begin{equation*}
     \pi \cdot P = \pi
 \end{equation*}
+
+\(\lim_{n\rightarrow\infty} P^n\) konvergiert zur stationären Verteilung \(\pi\), wenn die Markov-Kette homogen, irreduzibel und aperiodisch ist.\\
 
 Gleichungen lösen, ggf. mit Hilfe von Parametern \(t\), wenn es keine eindeutige Lösung gibt. Wert für \(t\) bestimmen, indem die Summe der Komponenten des Vektors \(\pi\) gleich 1 gesetzt wird.\\
 
@@ -82,7 +94,9 @@ Die Prüfung kann manuell erfolgen.\\
         1 & 0 & 0\\
         1 & 0 & 0
     \end{pmatrix}
-\) ist irreduzibel für \(p\in (0,1]\), da für \(p=0\) Zustände 2 und 3 nicht mehr erreichbar sind.
+\) ist irreduzibel für \(p\in (0,1]\), da für \(p=0\) Zustände 2 und 3 nicht mehr erreichbar sind.\\
+
+Gegenteil = \emph{reduzibel}: Man kann die große Markovkette in kleinere Teile zerlegen (reduzieren), die nicht miteinander verbunden sind.\\
 
 \subsection{Aperiodizität}
 
