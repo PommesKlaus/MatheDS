@@ -100,4 +100,47 @@ Daraus Berechnung der Teststatistik:
 
 \emph{Gedankenstütze: Determinante hoch 2 geteilt durch Produkt aus allen Spalten- und Zeilensummen}\\
 
-\textbf{5. Ablehnungsbereich:} \(H_0\) ablehnen, wenn:  \(T > \chi^2_{1;1-\alpha}\)\\
+Bzw. für größere Tabellen:\\
+
+\begin{minipage}[c]{0.4\textwidth}
+    \centering
+    \underline{Absoulte Häufigkeiten}\\
+
+    \begin{tabular}{c|ccc|c}
+             & $B_1$        & $\cdots$ & $B_J$         & $\Sigma$ \\ 
+    \hline
+    $A_1$    & $N_{11}$     & $\cdots$ & $N_{1j}$      & $N_{1\cdot}$ \\
+    $\vdots$ & $\vdots$     & $\ddots$ & $\vdots$      & $\vdots$ \\
+    $A_I$    & $N_{i1}    $ & $\cdots$ & $N_{ij}$      & $N_{i\cdot}$ \\
+    \hline
+    $\Sigma$ & $N_{\cdot1}$ & $\cdots$ & $N_{\cdot j}$ & $n$ \\
+    \end{tabular}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.1\textwidth}
+    \centering
+    $\longrightarrow$\\
+    Alles durch $n$ teilen
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.4\textwidth}
+    \centering
+    \underline{Relative Häufigkeiten}\\
+    
+    \begin{tabular}{c|ccc|c}
+             & $B_1$        & $\cdots$ & $B_J$         & $\Sigma$ \\ 
+    \hline
+    $A_1$    & $L_{11}$     & $\cdots$ & $L_{1j}$      & $L_{1\cdot}$ \\
+    $\vdots$ & $\vdots$     & $\ddots$ & $\vdots$      & $\vdots$ \\
+    $A_I$    & $L_{i1}    $ & $\cdots$ & $L_{ij}$      & $L_{i\cdot}$ \\
+    \hline
+    $\Sigma$ & $L_{\cdot1}$ & $\cdots$ & $L_{\cdot j}$ & $1$ \\
+    \end{tabular}
+\end{minipage}\\
+
+
+\begin{equation*}
+    D_{\rho} = \sum_{i=1}^{s}\sum_{j=1}^{t}\frac{(N_{ij}-\frac{N_{i\cdot}N_{\cdot j}}{n})^2}{\frac{N_{i\cdot}N_{\cdot j}}{n}} = n \cdot \sum_{i=1}^{s}\sum_{j=1}^{t}\frac{N_{ij}^2}{N_{i\cdot}N_{\cdot j}}-1 = n \cdot \sum_{i=1}^{s}\sum_{j=1}^{t}L_{i\cdot}L_{\cdot j}\left(\frac{L_{ij}}{L_{i\cdot}L_{\cdot j}}-1\right)^2
+\end{equation*}
+
+\textbf{5. Ablehnungsbereich:} \(H_0\) ablehnen, wenn:  \(T > \chi^2_{1;1-\alpha}\) bzw. \(T > \chi^2_{(s-1)(t-1);1-\alpha}\) \(\rightarrow\) Wert lt. Teststatistik (\(D_\rho\)) mit \(\chi^2\)-Tabelle vergleichen
