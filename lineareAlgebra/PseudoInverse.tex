@@ -1,4 +1,39 @@
+\subsection{Inverse Matrix \(A^{-1}\) für quadratische Matrizen}
+
+\textit{Eigenschaften:} Siehe Eigenschaften unter \ref{PseudoInverse}; zusätzlich:
+\begin{itemize}
+    \item \(A^T = A^{-1}\) \(\rightarrow\) \(A\) ist orthogonal
+    \item \(A  A^T = I\) \(\rightarrow\) \(A\) ist orthogonal
+    \item \(A^T  A = I\) \(\rightarrow\) \(A\) ist orthogonal\\
+\end{itemize}
+
+Berechnung für eine \textbf{2x2-Matrix}:
+\begin{equation*}
+    A = \begin{pmatrix}
+        a & b\\
+        c & d
+    \end{pmatrix} \rightarrow A^{-1} = \frac{1}{ad-bc} \begin{pmatrix}
+        d & -b\\
+        -c & a
+    \end{pmatrix}
+\end{equation*}
+
+Berechnung für eine \textbf{3x3-Matrix}:
+\begin{equation*}
+    A = \begin{pmatrix}
+        a & b & c\\
+        d & e & f\\
+        g & h & i
+    \end{pmatrix} \rightarrow A^{-1} = \frac{1}{det(A)} \begin{pmatrix}
+        ei-fh & ch-bi & bf-ce\\
+        fg-di & ai-cg & cd-af\\
+        dh-ge & bg-ah & ae-bd
+    \end{pmatrix}
+\end{equation*}
+
+
 \subsection{Pseudo-Inverse \(A^+\)}
+\label{PseudoInverse}
 
 Approximation einer inversen Matrix für nicht-quadratische Matrizen mit Hilfe der Singulärwertzerlegung (siehe \ref{SVD}).
 
