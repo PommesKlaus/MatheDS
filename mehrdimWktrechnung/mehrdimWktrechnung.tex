@@ -64,16 +64,26 @@ Zusammenhänge beachten:
     \item \textbf{fast sicher}: \(X_n \xrightarrow{fs} X\) wenn \(P(\lim_{n\rightarrow\infty}X_n=X)=1\)
 \end{itemize}
 
-Konvergenz bei einer Summe von Zufallsvariablen: \(X_n \rightarrow a\) und \(Y_n \rightarrow b \Longrightarrow X_n + Y_n \rightarrow a + b\)
+Konvergenz bei
+\begin{itemize}
+    \item einer \underline{Summe} von Zufallsvariablen: \(X_n \rightarrow a\) und \(Y_n \rightarrow b \Longrightarrow X_n + Y_n \rightarrow a + b\)
+    \item einem \underline{Produkt} von Zufallsvariablen: \(X_n \xrightarrow{\mathbb{P}} X\) und \(Y_n \xrightarrow{\mathbb{P}} Y \Longrightarrow X_nY_n \xrightarrow{\mathbb{P}} XY\)
+\end{itemize}
 
-\subsection{Bedingte Wahrscheinlichkeit}
+Zusammenhang zwischen Konvergenzarten: Wenn \(X_n \xrightarrow{f.s.} X\) oder \(X_n \xrightarrow{\mathcal{L}^p} X\), dann \(X_n \xrightarrow{\mathbb{P}} X\)
 
-\begin{equation*}
-    P(A|B)=\frac{P(A\cap B)}{P(B)}
-\end{equation*}
 
-\subsection{Bayes-Theorem}
+\subsection{Bedingte Wahrscheinlichkeit, Bayes-Theorem}
 
-\begin{equation*}
-    P(A|B)=\frac{P(B|A)P(A)}{P(B)}
-\end{equation*}
+\begin{minipage}{0.50\textwidth}
+    \begin{equation*}
+        P(A|B)=\frac{P(A\cap B)}{P(B)}
+    \end{equation*}
+\end{minipage}
+\hspace{1cm}
+\begin{minipage}{0.50\textwidth}
+    \begin{equation*}
+        P(A|B)=\frac{P(B|A)P(A)}{P(B)}
+    \end{equation*}
+\end{minipage}
+
