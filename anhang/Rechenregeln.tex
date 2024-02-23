@@ -1,0 +1,59 @@
+\subsection{Rechenregeln}
+
+\subsubsection{Potenzgesetze}
+
+\begin{equation*}
+    \begin{split}
+        a^0 &= 1\\
+        a^{-n} &= \frac{1}{a^n}\\
+        a^m\cdot a^n &= a^{m+n}\\
+        \frac{a^m}{a^n} &= a^{m-n}\\
+        (a^m)^n &= a^{m\cdot n}\\
+        (a\cdot b)^n &= a^n\cdot b^n\\
+        \left(\frac{a}{b}\right)^n &= \frac{a^n}{b^n}
+    \end{split}
+\end{equation*}
+
+
+\subsubsection{Logarithmusgesetze}
+\label{logarithmusgesetze}
+
+\begin{equation*}
+    \begin{split}
+        \ln(a\cdot b) &= \ln(a)+\ln(b)\\
+        \ln(a^b) &= b\cdot\ln(a)\\
+        \ln(e^a) &= a\\
+        \ln\left(\frac{a}{b}\right) &= \ln(a)-\ln(b)\\
+        \frac{\partial \ln(x)}{\partial x} &= \frac{1}{x}
+    \end{split}
+\end{equation*}
+
+
+\subsubsection{Integration durch Substitution}
+\label{substitution}
+
+\begin{equation*}
+    \int f(g(x))g'(x)dx = \int f(u)du
+\end{equation*}
+
+\begin{itemize}
+    \item Teilausdruck \(u=g(x)\) substituieren
+    \item Grenzen des Integrals anpassen (falls nötig) \(\rightarrow\) beiden Grenzen in \(u=g(x)\) einsetzen
+    \item Ableitung von \(u\) bilden: \(\frac{du}{dx}\) und nach \(dx\) umstellen
+    \item Integral umschreiben: \(\int f(u)\frac{du}{dx}dx = \int f(u)du\)
+\end{itemize}
+
+
+\subsubsection{Trigonometrische Funktionen}
+\begin{equation*}
+    \begin{split}
+        \sin^2(x)+\cos^2(x) &= 1\\
+        \tan(x) &= \frac{\sin(x)}{\cos(x)}\\
+        \cot(x) &= \frac{1}{\tan(x)} = \frac{\cos(x)}{\sin(x)}\\
+        \sin(2x) &= 2\sin(x)\cos(x)\\
+        \cos(2x) &= \cos^2(x)-\sin^2(x) = 2\cos^2(x)-1 = 1-2\sin^2(x)\\
+        \sin(x\pm y) &= \sin(x)\cos(y)\pm\cos(x)\sin(y)\\
+        \cos(x\pm y) &= \cos(x)\cos(y)\mp\sin(x)\sin(y)\\
+        \tan(x\pm y) &= \frac{\tan(x)\pm\tan(y)}{1\mp\tan(x)\tan(y)}
+    \end{split}
+\end{equation*}

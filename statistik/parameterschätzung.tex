@@ -58,14 +58,7 @@ Kriterien für gute Schätzer:
 
 \begin{enumerate}
     \item Aufstellen der ML-Funktion: \(L(\theta)=\prod_{i=1}^{n}f(x_i)\); mit Dichtefunktion \(f(x_i)\) (vgl. S.~\pageref{verteilungen})
-    \item Logarithmierung: \(\ln(L(\theta))=\sum_{i=1}^{n}\ln(f(x_i))\); Umformen/Vereinfachen mit \textbf{\emph{Logarithmengesetzen}}:
-        \begin{itemize}
-            \item \(\ln(a\cdot b)=\ln(a)+\ln(b)\)
-            \item \(\ln(a^b)=b\cdot\ln(a)\)
-            \item \(\ln(e^a)=a\)
-            \item \(\ln(\frac{a}{b})=\ln(a)-\ln(b)\)
-            \item 1. Ableitung: \(\frac{\partial \ln(x)}{\partial x} = \frac{1}{x}\)
-        \end{itemize}
+    \item Logarithmierung: \(\ln(L(\theta))=\sum_{i=1}^{n}\ln(f(x_i))\); Umformen/Vereinfachen mit Logarithmengesetzen (S.~\pageref{logarithmusgesetze})
     \item Ableiten nach \(\theta\) und Nullsetzen: \(\frac{\partial \ln(L(\theta))}{\partial \theta}=0\)
     \item Lösen der Gleichung nach \(\theta\)
     \item Überprüfen, ob es sich um ein Maximum handelt

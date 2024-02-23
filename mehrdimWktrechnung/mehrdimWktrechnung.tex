@@ -1,6 +1,46 @@
 \section{Mehrdimensionale Wahrscheinlichkeitsrechnung}
 
-\subsection{Formeln}
+\subsection{Erwartungs- und Varianzrechnung}
+
+\subsubsection{Erwartungswert}
+
+Erwartungswert bei \underline{stetiger} Zufallsvariable \(X\) mit Dichte \(f(x)\); Lösung mit Hilfe von \emph{Integration durch Substitution} (vgl. S.~\pageref{substitution}):
+\begin{equation*}
+    E[g(x)]=\int_{-\infty}^{\infty}g(x)f(x)dx
+\end{equation*}
+
+Erwartungswert bei \underline{diskreter} Zufallsvariable \(X\):
+\begin{equation*}
+    E[g(x)]=\sum_{i=1}^{n}g(a_i)p_i = \sum_{i=1}^{n}g(a_i)P(X=a_i) 
+\end{equation*}
+
+Rechenregeln für Erwartungswerte:
+\begin{itemize}
+    \item \(E[aX+bY]=aE[X]+bE[Y]\)
+    \item \(E[XY]=E[X]E[Y]\) \(\Leftrightarrow\) \(X\) und \(Y\) unkorreliert
+    \item \(E[X^2]=Var[X]+E[X]^2\)
+\end{itemize}
+
+
+\subsubsection{Varianz}
+
+Varianz bei \underline{stetiger} Zufallsvariable \(X\) mit Dichte \(f(x)\):
+\begin{equation*}
+    Var[X]=E[(X-E[X])^2]=E[X^2]-(E[X])^2=\int_{-\infty}^{\infty}(x-E[X])^2f(x)dx
+\end{equation*}
+
+Varianz bei \underline{diskreter} Zufallsvariable \(X\):
+\begin{equation*}
+    Var[X]=E[(X-E[X])^2]=\sum_{i=1}^{n}(a_i-E[X])^2p_i
+\end{equation*}
+
+Rechenregeln für Varianzen:
+\begin{itemize}
+    \item \(Var[aX+bY]=a^2Var[X]+b^2Var[Y]+2abCov[X,Y]\)
+    \item \(Var[X+Y]=Var[X]+Var[Y]+2Cov[X,Y]\)
+\end{itemize}
+
+
 
 \subsubsection{Kovarianz, Korrelation}
 \begin{equation*}
