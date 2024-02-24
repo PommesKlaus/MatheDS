@@ -18,6 +18,42 @@
 \end{itemize}
 
 
+\subsubsection{Test bei Normalverteilung und bekanntem \(\sigma^2\) (Gauß-Test)}
+
+Tests für den Erwartungswert \(\mu\) bzgl. eines vorgegebenen Wertes (\(\mu_0\)) einer Normalverteilung mit bekannter Varianz \(\sigma^2\).\\
+
+\begin{tabular}{|l|c|c|c|}
+    \hline
+    Nullhypothese  & $H_0 : \mu = \mu_0$    & $H_0 : \mu \leq \mu_0$ & $H_0 : \mu \geq \mu_0$ \\ 
+    \hline
+    Gegenhypothese & $H_0 : \mu \neq \mu_0$ & $H_0 : \mu > \mu_0$    & $H_0 : \mu < \mu_0$ \\ 
+    \hline
+    Prüfgröße      & \multicolumn{3}{|c|}{$T=\frac{M(X)-\mu_0}{\sigma}\sqrt{n}$}\\
+    \hline
+    $H_0$ ablehnen, falls & $|T| > u_{1-\alpha/2}$ & $T > u_{1-\alpha}$ & $T < -u_{1-\alpha}$\\
+    \hline
+\end{tabular}
+
+
+\subsubsection{Test bei Normalverteilung und unbekanntem \(\sigma^2\) (t-Test)}
+
+Tests für den Erwartungswert \(\mu\) bzgl. eines vorgegebenen Wertes (\(\mu_0\)) einer Normalverteilung mit unbekannter Varianz \(\sigma^2\).\\
+
+\begin{tabular}{|l|c|c|c|}
+    \hline
+    Nullhypothese  & $H_0 : \mu = \mu_0$    & $H_0 : \mu \leq \mu_0$ & $H_0 : \mu \geq \mu_0$ \\ 
+    \hline
+    Gegenhypothese & $H_0 : \mu \neq \mu_0$ & $H_0 : \mu > \mu_0$    & $H_0 : \mu < \mu_0$ \\ 
+    \hline
+    Prüfgröße      & \multicolumn{3}{|c|}{$T=\frac{M(X)-\mu_0}{S*}\sqrt{n}$ mit $S*=\sqrt{\frac{V*(X)}{n}}$}\\
+    \hline
+    $H_0$ ablehnen, falls & $|T| > t_{n-1, 1-\alpha/2}$ & $T > t_{n-1, 1-\alpha}$ & $T < -t_{n-1, 1-\alpha}$\\
+    \hline
+\end{tabular}
+
+
+
+
 \subsubsection{\(\chi^2\)-Anpassungstest}
 
 Vergleicht die beobachtete Verteilung einer Stichprobe mit 

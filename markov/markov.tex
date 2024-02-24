@@ -39,8 +39,6 @@ Ein Zustandsvektor \(\pi\) heißt \emph{stationäre Verteilung} einer Markov-Ket
     \pi \cdot P = \pi
 \end{equation*}
 
-\(\lim_{n\rightarrow\infty} P^n\) konvergiert zur stationären Verteilung \(\pi\), wenn die Markov-Kette homogen, irreduzibel und aperiodisch ist.\\
-
 Gleichungen lösen, ggf. mit Hilfe von Parametern \(t\), wenn es keine eindeutige Lösung gibt. Wert für \(t\) bestimmen, indem die Summe der Komponenten des Vektors \(\pi\) gleich 1 gesetzt wird.\\
 
 \textbf{Beispiel:}
@@ -78,13 +76,20 @@ Da \(\sum \pi_i=1\) gilt
 
 Daraus folgt der stationäre Zustandsvektor: \(\pi = \begin{pmatrix}
     \frac{3}{8} & \frac{5}{8}
-\end{pmatrix}\)
+\end{pmatrix}\)\\
 
+
+\(\lim_{n\rightarrow\infty} P^n\) konvergiert zur stationären Verteilung \(\pi\), wenn die Markov-Kette homogen, irreduzibel und aperiodisch ist. Das heißt für beliebige Startverteilungen gilt \(\lim_{n\rightarrow\infty} \mu_0P^n = \pi\). Durch Extrahieren der Zeilenvektoren von \(P^n\) (z.B. \((1,0)P^n=(P^n_{1,1}, P^n_{1,2})\) und \((0,1)P^n=(P^n_{2,1}, P^n_{2,2})\)) kann man dann schreiben: \(\lim_{n\rightarrow\infty} (1,0)P^n = \lim_{n\rightarrow\infty} (P^n_{1,1}, P^n_{1,2}) = \pi\) und \(\lim_{n\rightarrow\infty} (0,1)P^n = \lim_{n\rightarrow\infty} (P^n_{2,1}, P^n_{2,2}) = \pi\).\\
+
+Im obigen Beispiel ergibt sich \(\lim_{n\rightarrow\infty} P^n = \begin{pmatrix}
+    \frac{3}{8} & \frac{5}{8}\\
+    \frac{3}{8} & \frac{5}{8}\\
+\end{pmatrix}\)
 
 
 \subsection{Irreduzibilität}
 
-Es ist von jedem Zustand aus möglich, jeden anderen Zustand zu erreichen.
+Es ist von jedem Zustand aus möglich, jeden anderen Zustand zu erreichen; d.h. genau dann, wenn es von jedem Knoten aus einen Weg über positiv gewichtete Kanten zu jedem anderen beliebigen Knoten gibt.
 Die Prüfung kann manuell erfolgen.\\
 
 \textbf{Beispiel:}
