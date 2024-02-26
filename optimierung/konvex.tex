@@ -59,7 +59,7 @@ Eine Funktion \(f(x)\) heißt \emph{Lipschitz-stetig}, wenn \(||f(x) - f(y)|| \l
 Eine Lipschitz-stetige Funktion ist eine stetige Funktion, deren Steigung beschränkt ist:
 
 \begin{equation*}
-    \left\Vert\frac{f(x)-f(y)}{x-y}\right\Vert \leq L \rightarrow \text{Jede Sekantensteigung} \leq L
+    \underbrace{\left\Vert\frac{f(x)-f(y)}{x-y}\right\Vert}_{Sekantensteigung} \leq L \rightarrow \text{Jede Sekantensteigung} \leq L
 \end{equation*}
 
 \underline{Implikation:} Wenn zwei eingesetzte Punkte (\(x\), \(y\)) näher zusammenrücken, dann nähern sich auch die Funktionswerte \(f(x)\) und \(f(y)\) an.\\
@@ -68,4 +68,10 @@ Eine Lipschitz-stetige Funktion ist eine stetige Funktion, deren Steigung beschr
 Eine Funktion \(f(x)\) heißt \textbf{L-glatt} (\(L>0\)), falls der Gradient L-Lipschitz ist:
 \begin{equation*}
     \forall x, y: ||\nabla f(x) - \nabla f(y)|| \leq L ||x - y||
+\end{equation*}
+
+Lösung z.B. über den \underline{Mittelwertsatz}:
+
+\begin{equation*}
+    L = \sup_{\xi \in (a,b)}||f''(\xi)||\text{, wobei } a, b \text{ die Schranken des Definitionsbereichs sind}
 \end{equation*}

@@ -8,7 +8,7 @@ Es gelten folgende KKT-Bedingungen:
     \item \(h_j(x^*)=0 \rightarrow\) \emph{Gleichungs-NB nach \(0\) umformen}
     \item \(\lambda_i^*\geq 0\)
     \item \(\lambda_i^*g_i(x^*)=0\)
-    \item $\mathcal{L}'(x,\lambda, v) = \nabla f(x^*) + \sum_{i=1}^m \lambda_i^* \nabla g_i(x^*) + \sum_{j=1}^p v_j^* \nabla h_j(x^*) = 0$\\
+    \item $\mathcal{L}'(x,\lambda, v) = \nabla f(x^*) + \sum_{i=1}^m \lambda_i^* \nabla g_i(x^*) + \sum_{j=1}^p v_j^* \nabla h_j(x^*) = 0$
 \end{enumerate}
 
 mit den Lagrangemultiplikatoren ($\lambda, v$) als \emph{duale Variablen} und $x$ als \emph{primale Variable}.\\
@@ -17,13 +17,9 @@ mit den Lagrangemultiplikatoren ($\lambda, v$) als \emph{duale Variablen} und $x
 \begin{itemize}
     \item Gleichungs-NB vorhanden \(\rightarrow\) (II) nach einer Variablen auflösen und in (I) und (V) einsetzen
     \item 1. Ableitungen (Gradient \(\nabla\)) von (I), (II) und Zielfunktion \(f(x^*)\) bilden und (V) aufstellen
-    \item (IV) aufstellen und Fallgruppen bilden: Was muss für \(\lambda_i\) und \(g_i(x^*)\) gelten, damit Produkt \(=0\) wird? Fallgruppen über Kreuz bilden!
-    \item Fallgruppen in (V) einsetzen und prüfen: Ist Lösung möglich? Sind alle Bedingungen erfüllt?
-    \begin{itemize}
-        \item Wenn ja: KKT-Punkt = Lösung gefunden
-        \item Wenn nein: Kombination nicht zulässig \(\rightarrow\) verwerfen!
-    \end{itemize}
-    \item Lösung aufschreiben: KKT-Punkt (\(x, y\)), Zielfunktionswert (\(p^*\)), duale Variablen (Lagrange-Multiplikatoren \(\lambda_i, v_j\))\\
+    \item (IV) aufstellen und Fallgruppen bilden: Was muss für \(\lambda_i\) und \(g_i(x^*)\) gelten, damit Produkt \(=0\) wird?
+    \item Fallgruppen in (V) einsetzen und prüfen: Ist Lösung möglich? Sind alle Bedingungen erfüllt? Wenn ja: KKT-Punkt = Lösung gefunden; wenn nein: Kombination nicht zulässig \(\rightarrow\) verwerfen!
+    \item Lösung: KKT-Punkt (\(x, y\)), Zielfunktionswert (\(p^*\)), duale Variablen (Lagrange-Multiplikatoren \(\lambda_i, v_j\))
 \end{itemize}
 
 \underline{Beispiel}:
@@ -87,7 +83,7 @@ mit den Lagrangemultiplikatoren ($\lambda, v$) als \emph{duale Variablen} und $x
                     \cline{1-2}
                     8y = 48 \Leftrightarrow y &= 6 \checkmark\\
                     x = y-8 \Leftrightarrow x &= -2 \checkmark\\
-                    \lambda_1^* = 2y &= 12 \checkmark\\
+                    \lambda_1^* = 2y &= 12 \checkmark
                 \end{align*} Es handelt sich um einen KKT-Punkt
 
                 \item \underline{Fall 4}: \(x=y-8; y=0 \rightarrow \begin{pmatrix}
